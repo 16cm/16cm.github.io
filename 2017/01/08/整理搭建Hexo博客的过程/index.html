@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/08/整理搭建Hexo博客的过程/index.html">
 <meta property="og:site_name" content="16cm">
 <meta property="og:description" content="大致流程：点我">
-<meta property="og:updated_time" content="2017-01-08T08:44:43.612Z">
+<meta property="og:updated_time" content="2017-01-08T08:50:12.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="整理搭建Hexo博客的过程">
 <meta name="twitter:description" content="大致流程：点我">
@@ -362,8 +362,7 @@
         <p>大致流程：<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">点我</a> </p>
 <a id="more"></a>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="第一个问题"><a href="#第一个问题" class="headerlink" title="第一个问题"></a>第一个问题</h3><p>原教程中的 <code class="highlighter-rouge">开启gh-pages功能</code> ，现在需要手动开启：<a href="https://pages.github.com/" target="_blank" rel="external">看这里</a> ，只要 <code class="highlighter-rouge">yourname.github.io</code> 可以正常访问就行了。</p>
-<p>###第二个问题</p>
-<p>执行：</p>
+<h3 id="第二个问题"><a href="#第二个问题" class="headerlink" title="第二个问题"></a>第二个问题</h3><p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
 <p>出现：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey).</div><div class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</div><div class="line">Please make sure you have the correct access rights</div></pre></td></tr></table></figure>
@@ -371,9 +370,9 @@
 <p>然后生成密钥：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C “yourname@gmail.com”</div><div class="line">按3个回车，密码为空。</div><div class="line">Your identification has been saved <span class="keyword">in</span> /home/tekkub/.ssh/id_rsa.</div><div class="line">Your public key has been saved <span class="keyword">in</span> /home/tekkub/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:********</div></pre></td></tr></table></figure>
 <p>最后得到了两个文件：id_rsa和id_rsa.pub，打开<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>，在设置中添加密钥。</p>
-<p>测试：</p>
+<p>最后测试：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div><div class="line">The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.</div><div class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</div><div class="line">Are you sure you want to <span class="built_in">continue</span> connecting (yes/no)? yes</div><div class="line">Warning: Permanently added ‘github.com,207.97.227.239′ (RSA) to the list of known hosts.</div><div class="line">ERROR: Hi tekkub! You’ve successfully authenticated, but GitHub does not provide shell access</div><div class="line">Connection to github.com closed.</div></pre></td></tr></table></figure>
-<p>测试成功就可以push code了。</p>
+<p>测试成功就可以 <code>hexo d</code> 了。</p>
 
       
     </div>
@@ -534,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个问题"><span class="nav-number">1.1.</span> <span class="nav-text">第一个问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个问题"><span class="nav-number">1.1.</span> <span class="nav-text">第一个问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个问题"><span class="nav-number">1.2.</span> <span class="nav-text">第二个问题</span></a></li></ol></li></ol></div>
             
 
           </div>
