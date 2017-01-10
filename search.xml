@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Markdown 语法]]></title>
+      <url>%2F2017%2F01%2F10%2FMarkdown%20%E8%AF%AD%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[一些常用的 Markdown 语法。 段落一行就是一个段落，如果要另起一行，在两个段落之间添加一个空行即可。 斜体*斜体* 效果 斜体 粗体**粗体** 效果 粗体 ***斜体+粗体*** 效果 斜体+粗体 标题# 这是 H1 # ## 这是 H2 ## ### 这是 H3 ### ... ###### 这是 H6 ###### 效果 这是 H1这是 H2这是 H3… 这是 H6引用&gt;引用 效果 引用 或 &gt;引用&gt;&gt;引用 效果 引用 引用 列表无序列表* 第一条* 第二条* 第三条 效果 第一条 第二条 第三条 有序列表1. 第一条2. 第二条3. 第三条 效果 第一条 第二条 第三条 代码用反引号123456如果代码的内容中有反引号，请用两个反引号包裹。代码中的 `&amp;、&lt;、&gt; `符号都会自动转义，请放心使用。### 代码区域\ 代码区域\12效果 代码区域12345678910### 分隔线`***`效果***### 链接 http://123.com123456效果[http://123.com](http://123.com)或简化 http://123.com12### 图像 1234这种方式需要 `123.jpg` 和 `*.md` 文件放在一起。或 12345678图片放在 `*.md` 同层级的 `123` 文件夹下。### 转义在其他字符前加 `\` 反斜线保持字符原样输出。### 表格 物品 数量 单价 iPhone 1 100 iPad 2 200 IPod 3 300 ``` 效果 物品 数量 单价 iPhone 1 100 iPad 2 200 IPod 3 300 注意第二行的冒号表示居左居右还是居中。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hexo 指令]]></title>
       <url>%2F2017%2F01%2F09%2FHexo%20%E6%8C%87%E4%BB%A4%2F</url>
       <content type="text"><![CDATA[一些常用的 Hexo 指令。 新建网站1$ hexo init 生成静态文件1$ hexo generate 启动服务器1$ hexo server 默认情况下，访问网址为: http://localhost:4000/ 新建一篇文章1$ hexo new "My New Post" 清除缓存文件 db.json 和已生成的静态文件 public1$ hexo clean 部署网站1$ hexo deploy 显示草稿1$ hexo --draft 显示 source/_drafts 文件夹中的草稿文章。 显示版本1$ hexo -v 安全模式1$ hexo --safe 在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。 调试模式1$ hexo --debug 在终端中显示调试信息并记录到 debug.log 。]]></content>
