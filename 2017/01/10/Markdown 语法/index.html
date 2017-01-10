@@ -90,13 +90,10 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/10/Markdown 语法/index.html">
 <meta property="og:site_name" content="16cm">
 <meta property="og:description" content="一些常用的 Markdown 语法。">
-<meta property="og:image" content="http://yoursite.com/123.jpg">
-<meta property="og:image" content="http://yoursite.com/123/123.jpg">
-<meta property="og:updated_time" content="2017-01-10T12:07:08.288Z">
+<meta property="og:updated_time" content="2017-01-10T12:22:59.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 语法">
 <meta name="twitter:description" content="一些常用的 Markdown 语法。">
-<meta name="twitter:image" content="http://yoursite.com/123.jpg">
 
 
 
@@ -381,18 +378,18 @@
 <p><code>###### 这是 H6 ######</code></p>
 <p>效果</p>
 <h1 id="这是-H1"><a href="#这是-H1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2><h3 id="这是-H3"><a href="#这是-H3" class="headerlink" title="这是 H3"></a>这是 H3</h3><p>…</p>
-<h6 id="这是-H6"><a href="#这是-H6" class="headerlink" title="这是 H6"></a>这是 H6</h6><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><code>&gt;引用</code></p>
+<h6 id="这是-H6"><a href="#这是-H6" class="headerlink" title="这是 H6"></a>这是 H6</h6><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><code>&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</code></p>
 <p>效果</p>
 <blockquote>
-<p>引用</p>
+<p>markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</p>
 </blockquote>
 <p>或</p>
-<p><code>&gt;引用</code><br><code>&gt;&gt;引用</code></p>
+<p><code>&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。</code><br><code>&gt;&gt;任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</code></p>
 <p>效果</p>
 <blockquote>
-<p>引用</p>
+<p>markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。</p>
 <blockquote>
-<p>引用</p>
+<p>任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</p>
 </blockquote>
 </blockquote>
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p><code>*   第一条</code><br><code>*   第二条</code><br><code>*   第三条</code></p>
@@ -409,40 +406,27 @@
 <li>第二条</li>
 <li>第三条</li>
 </ol>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>用反引号<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">如果代码的内容中有反引号，请用两个反引号包裹。</div><div class="line">代码中的 `&amp;、&lt;、&gt; `符号都会自动转义，请放心使用。</div><div class="line"></div><div class="line">### 代码区域</div><div class="line"></div><div class="line">\</div></pre></td></tr></table></figure></p>
-<p>代码区域<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">效果</div></pre></td></tr></table></figure></p>
-<p>代码区域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 分隔线</div><div class="line"></div><div class="line">`***`</div><div class="line"></div><div class="line">效果</div><div class="line"></div><div class="line">***</div><div class="line"></div><div class="line">### 链接</div></pre></td></tr></table></figure></p>
-<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">效果</div><div class="line"></div><div class="line">[http://123.com](http://123.com)</div><div class="line"></div><div class="line">或简化</div></pre></td></tr></table></figure></p>
-<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 图像</div></pre></td></tr></table></figure></p>
-<p><img src="123.jpg" alt="123"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">这种方式需要 `123.jpg` 和 `*.md` 文件放在一起。</div><div class="line"></div><div class="line">或</div></pre></td></tr></table></figure></p>
-<p><img src="123/123.jpg" alt="123"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">图片放在 `*.md` 同层级的 `123` 文件夹下。</div><div class="line"></div><div class="line">### 转义</div><div class="line"></div><div class="line">在其他字符前加 `\` 反斜线保持字符原样输出。</div><div class="line"></div><div class="line">### 表格</div></pre></td></tr></table></figure></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">物品</th>
-<th style="text-align:right">数量</th>
-<th style="text-align:center">单价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">iPhone</td>
-<td style="text-align:right">1</td>
-<td style="text-align:center">100</td>
-</tr>
-<tr>
-<td style="text-align:left">iPad</td>
-<td style="text-align:right">2</td>
-<td style="text-align:center">200</td>
-</tr>
-<tr>
-<td style="text-align:left">IPod</td>
-<td style="text-align:right">3</td>
-<td style="text-align:center">300</td>
-</tr>
-</tbody>
-</table>
-<p>```</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>用反引号 <code>来标记内联代码，它们会解释成 &lt;code&gt; 标签。
+如果代码的内容中有反引号，请用两个反引号包裹。
+代码中的</code>&amp;、&lt;、&gt; `符号都会自动转义，请放心使用。</p>
+<h3 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h3><p>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">代码区域</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">代码区域</div></pre></td></tr></table></figure>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p><code>***</code></p>
+<p>效果</p>
+<hr>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[http://123.com](http://123.com)</div></pre></td></tr></table></figure>
+<p>效果</p>
+<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a></p>
+<p>或简化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http://123.com&gt;</div></pre></td></tr></table></figure>
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![123](123.jpg)</div></pre></td></tr></table></figure>
+<p>这种方式需要 <code>123.jpg</code> 和 <code>*.md</code> 文件放在一起。</p>
+<p>或 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![123](123/123.jpg)</div></pre></td></tr></table></figure>
+<p>图片放在 <code>*.md</code> 同层级的 <code>123</code> 文件夹下。</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>在其他字符前加 <code>\</code> 反斜线保持字符原样输出。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| 物品   | 数量  | 单价  |</div><div class="line">|:-------| ----: | :---: |</div><div class="line">| iPhone | 1     | 100   |</div><div class="line">| iPad   | 2     | 200   |</div><div class="line">| IPod   | 3     | 300   |</div></pre></td></tr></table></figure>
 <p>效果</p>
 <table>
 <thead>
@@ -631,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落"><span class="nav-number">1.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体"><span class="nav-number">2.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#粗体"><span class="nav-number">3.</span> <span class="nav-text">粗体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">4.</span> <span class="nav-text">标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这是-H1"><span class="nav-number"></span> <span class="nav-text">这是 H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这是-H2"><span class="nav-number"></span> <span class="nav-text">这是 H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这是-H3"><span class="nav-number">1.</span> <span class="nav-text">这是 H3</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#这是-H6"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">这是 H6</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">3.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">3.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">3.2.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落"><span class="nav-number">1.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体"><span class="nav-number">2.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#粗体"><span class="nav-number">3.</span> <span class="nav-text">粗体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">4.</span> <span class="nav-text">标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这是-H1"><span class="nav-number"></span> <span class="nav-text">这是 H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这是-H2"><span class="nav-number"></span> <span class="nav-text">这是 H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这是-H3"><span class="nav-number">1.</span> <span class="nav-text">这是 H3</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#这是-H6"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">这是 H6</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">3.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">3.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">3.2.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码区域"><span class="nav-number">5.</span> <span class="nav-text">代码区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分隔线"><span class="nav-number">6.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-number">7.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像"><span class="nav-number">8.</span> <span class="nav-text">图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转义"><span class="nav-number">9.</span> <span class="nav-text">转义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">10.</span> <span class="nav-text">表格</span></a></li></ol></div>
             
 
           </div>
