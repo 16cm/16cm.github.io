@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="单片机程序中为什么要禁止看门狗？">
+<meta name="description" content="基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单片机程序中为什么要禁止看门狗?">
-<meta property="og:url" content="http://yoursite.com/2017/03/16/单片机程序中为什么要禁止看门狗/index.html">
+<meta property="og:title" content="键盘扫描，支持短按、长按、双击">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/键盘扫描，支持短按、长按、双击/index.html">
 <meta property="og:site_name" content="16cm">
-<meta property="og:description" content="单片机程序中为什么要禁止看门狗？">
-<meta property="og:updated_time" content="2017-03-20T12:06:18.742Z">
+<meta property="og:description" content="基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。">
+<meta property="og:updated_time" content="2017-03-21T12:24:36.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单片机程序中为什么要禁止看门狗?">
-<meta name="twitter:description" content="单片机程序中为什么要禁止看门狗？">
+<meta name="twitter:title" content="键盘扫描，支持短按、长按、双击">
+<meta name="twitter:description" content="基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/16/单片机程序中为什么要禁止看门狗/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/21/键盘扫描，支持短按、长按、双击/"/>
 
 
 
 
 
-  <title> 单片机程序中为什么要禁止看门狗? | 16cm </title>
+  <title> 键盘扫描，支持短按、长按、双击 | 16cm </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/单片机程序中为什么要禁止看门狗/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/键盘扫描，支持短按、长按、双击/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="16cm">
@@ -287,7 +287,7 @@
             
             
               
-                单片机程序中为什么要禁止看门狗?
+                键盘扫描，支持短按、长按、双击
               
             
           </h1>
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T19:00:00+08:00">
-                2017-03-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T20:22:41+08:00">
+                2017-03-21
               </time>
             
 
@@ -321,8 +321,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/16/单片机程序中为什么要禁止看门狗/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/16/单片机程序中为什么要禁止看门狗/" itemprop="commentCount"></span>
+                <a href="/2017/03/21/键盘扫描，支持短按、长按、双击/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/21/键盘扫描，支持短按、长按、双击/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -332,7 +332,7 @@
 
           
           
-             <span id="/2017/03/16/单片机程序中为什么要禁止看门狗/" class="leancloud_visitors" data-flag-title="单片机程序中为什么要禁止看门狗?">
+             <span id="/2017/03/21/键盘扫描，支持短按、长按、双击/" class="leancloud_visitors" data-flag-title="键盘扫描，支持短按、长按、双击">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -359,14 +359,10 @@
       
 
       
-        <p>单片机程序中为什么要禁止看门狗？</p>
+        <p>基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。</p>
 <a id="more"></a>
-<p>设置<strong>看门狗</strong>定时器的时候，必须先关闭它才能设置，否则在开启状态下设置看门狗定时器可能会出现问题。一般单片机和DSP、还有ARM芯片里设置内部功能的时候，都是先关闭这个功能，再设置。中断也是类似的，我们通常它把中断全部关闭了，然后在程序里面进一步设置。</p>
-<hr>
-<p>要搞清楚关闭看门狗定时器的深层次原因，我们先得明白其用途：</p>
-<p>它其实就是一个定时器，这个定时器溢出是会产生一个中断响应，这个中断响应对应的中断服务就是跳回程序开头，也就是复位。启动看门狗后，要定时在程序中把看门狗的计数器清0，以防止它进入中断然后复位，这就叫做<strong>喂狗</strong>。</p>
-<p>看门狗定时器常用在程序很容易跑飞的情况下（比如等待超时，意外进入死循环等）——在启动看门狗定时器的前提下，如果程序跑飞，不用怕，等计数器WTCNT溢出时，程序会自动复位。但在一般的程序中是不太可能会跑飞的，所以多数情况下我们关闭看门狗，是因为引入了看门狗之后就多了定时计数值处理的一些代码，这增加了程序的复杂性。</p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/*按键端口初始化*/</div><div class="line">void Key_Init(void)</div><div class="line">&#123;</div><div class="line">	GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line">	/*开启按键端口（PA）的时钟*/</div><div class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);</div><div class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;  </div><div class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;  //上拉输入</div><div class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">int Key_Scan(void)</div><div class="line">&#123;	</div><div class="line">	int Down_Value=0;</div><div class="line">	/*检测是否有按键按下*/</div><div class="line">	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 )</div><div class="line">	&#123;		</div><div class="line">		delay_ms(20);</div><div class="line">		if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 )</div><div class="line">		&#123;</div><div class="line">			if(k1_shortpress_happen==0)</div><div class="line">			&#123;  </div><div class="line">				k1_shortpress_happen = 1;</div><div class="line">				key1_shortpress_Flag = 1;</div><div class="line">				key1_timing=0;			</div><div class="line">			&#125;</div><div class="line">				</div><div class="line">			if(k1_shortpress_happen==1)  </div><div class="line">			&#123;  </div><div class="line">				if(key1_timing &gt; 3000) </div><div class="line">				&#123;  </div><div class="line">					Down_Value = 2;                   //长按生效标志位</div><div class="line">					k1_shortpress_happen = 0;</div><div class="line">					k1_LongPress_Flag=1;</div><div class="line">				&#125;</div><div class="line">			&#125;  </div><div class="line">		&#125; </div><div class="line">	&#125;		</div><div class="line">	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8)==1) </div><div class="line">	&#123;  </div><div class="line">		key1_shortpress_Flag = 0;</div><div class="line">		if(k1_shortpress_happen==1)</div><div class="line">		&#123;  </div><div class="line">			k1_shortpress_happen = 0;   </div><div class="line">			if(k1_doublepress_happen==0) </div><div class="line">			&#123;  </div><div class="line">				k1_doublepress_happen = 1;</div><div class="line">				key1_doublepress_Flag=1;</div><div class="line">				key1_doublepress_timing = 0;</div><div class="line">			&#125;  </div><div class="line">			else  </div><div class="line">			&#123;</div><div class="line">				if(key1_doublepress_timing &lt; 300) </div><div class="line">				&#123;  </div><div class="line">					k1_doublepress_happen = 0;  </div><div class="line">					Down_Value = 0;                   //短按生效标志位</div><div class="line">				&#125;  </div><div class="line">			&#125; </div><div class="line">		&#125;</div><div class="line">		else if(k1_doublepress_happen == 1)</div><div class="line">		&#123;  </div><div class="line">			if(key1_doublepress_timing &gt; 300)  </div><div class="line">			&#123;  </div><div class="line">				if(k1_LongPress_Flag==1)</div><div class="line">				&#123;</div><div class="line">					k1_LongPress_Flag=0;</div><div class="line">				&#125;</div><div class="line">				else</div><div class="line">				&#123;</div><div class="line">					Down_Value = 1;                   //双击生效标志位</div><div class="line">				&#125;</div><div class="line">				k1_doublepress_happen = 0;</div><div class="line">				key1_doublepress_Flag = 0;</div><div class="line">			&#125;  </div><div class="line">		&#125;</div><div class="line">		else if(k1_longpress_happen==1)  </div><div class="line">		&#123;</div><div class="line">			k1_longpress_happen = 0;</div><div class="line">		&#125;			</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -398,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/10/Markdown 语法/" rel="next" title="Markdown 语法">
-                <i class="fa fa-chevron-left"></i> Markdown 语法
+              <a href="/2017/03/20/波数分辨率与波长分辨率的转换/" rel="next" title="波数分辨率与波长分辨率的转换">
+                <i class="fa fa-chevron-left"></i> 波数分辨率与波长分辨率的转换
               </a>
             
           </div>
@@ -407,10 +403,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/20/波数分辨率与波长分辨率的转换/" rel="prev" title="波数分辨率与波长分辨率的转换">
-                波数分辨率与波长分辨率的转换 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,8 +428,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/16/单片机程序中为什么要禁止看门狗/"
-           data-title="单片机程序中为什么要禁止看门狗?" data-url="http://yoursite.com/2017/03/16/单片机程序中为什么要禁止看门狗/">
+      <div class="ds-thread" data-thread-key="2017/03/21/键盘扫描，支持短按、长按、双击/"
+           data-title="键盘扫描，支持短按、长按、双击" data-url="http://yoursite.com/2017/03/21/键盘扫描，支持短按、长按、双击/">
       </div>
     
   </div>
