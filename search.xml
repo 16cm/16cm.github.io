@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[MDK之ST-Link下载设置]]></title>
+      <url>%2F2017%2F03%2F23%2FMDK%E4%B9%8BST-Link%E4%B8%8B%E8%BD%BD%E8%AE%BE%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[MDK支持仿真器、串口和ST-LINK下载。 #1# 快捷键 Alt+F7 ，然后选择 Debug ; #2# 点击 Settings ; #3# 选择 Utilities ，点击 Settings 设置完成后，点击下载按钮，看见 Application running… 就说明已经下载成功。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[键盘扫描，支持短按、长按、双击]]></title>
       <url>%2F2017%2F03%2F21%2F%E9%94%AE%E7%9B%98%E6%89%AB%E6%8F%8F%EF%BC%8C%E6%94%AF%E6%8C%81%E7%9F%AD%E6%8C%89%E3%80%81%E9%95%BF%E6%8C%89%E3%80%81%E5%8F%8C%E5%87%BB%2F</url>
       <content type="text"><![CDATA[基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。 12345678910/*按键端口初始化*/void Key_Init(void)&#123; GPIO_InitTypeDef GPIO_InitStructure; /*开启按键端口（PA）的时钟*/ RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE); GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8; GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; //上拉输入 GPIO_Init(GPIOB, &amp;GPIO_InitStructure);&#125; 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071/*扫描按键*/int Key_Scan(void)&#123; int Down_Value=0; /*检测是否有按键按下*/ if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 ) &#123; delay_ms(20); if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 ) &#123; if(k1_shortpress_happen==0) &#123; k1_shortpress_happen = 1; key1_shortpress_Flag = 1; key1_timing=0; &#125; if(k1_shortpress_happen==1) &#123; if(key1_timing &gt; 3000) &#123; Down_Value = 2; //长按生效标志位 k1_shortpress_happen = 0; k1_LongPress_Flag=1; &#125; &#125; &#125; &#125; if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8)==1) &#123; key1_shortpress_Flag = 0; if(k1_shortpress_happen==1) &#123; k1_shortpress_happen = 0; if(k1_doublepress_happen==0) &#123; k1_doublepress_happen = 1; key1_doublepress_Flag=1; key1_doublepress_timing = 0; &#125; else &#123; if(key1_doublepress_timing &lt; 300) &#123; k1_doublepress_happen = 0; Down_Value = 0; //短按生效标志位 &#125; &#125; &#125; else if(k1_doublepress_happen == 1) &#123; if(key1_doublepress_timing &gt; 300) &#123; if(k1_LongPress_Flag==1) &#123; k1_LongPress_Flag=0; &#125; else &#123; Down_Value = 1; //双击生效标志位 &#125; k1_doublepress_happen = 0; key1_doublepress_Flag = 0; &#125; &#125; else if(k1_longpress_happen==1) &#123; k1_longpress_happen = 0; &#125; &#125;&#125;]]></content>
