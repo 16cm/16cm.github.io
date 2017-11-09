@@ -200,42 +200,23 @@
 <li>第二条</li>
 <li>第三条</li>
 </ol>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>用反引号 ` 来标记内联代码，如果代码的内容中有反引号，请用两个反引号包裹。</p>
-<p>代码中的 &amp;、&lt;、&gt; 符号都会自动转义，请放心使用。</p>
-<h3 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\</div></pre></td></tr></table></figure>
-<p>\代码区域<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line"></div><div class="line">去掉反斜线</div></pre></td></tr></table></figure></p>
-<p>代码区域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 分隔线</div><div class="line"></div><div class="line">`***`</div><div class="line"></div><div class="line">***</div><div class="line"></div><div class="line">### 链接</div></pre></td></tr></table></figure></p>
-<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">[http://123.com](http://123.com)</div><div class="line"></div><div class="line">or</div></pre></td></tr></table></figure></p>
-<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 图像</div></pre></td></tr></table></figure></p>
-<p><img src="123.jpg" alt="123"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">这种方式需要 &lt;font color=#FF00&gt;123.jpg&lt;/font&gt; 和 &lt;font color=#FF00&gt;.md&lt;/font&gt; 文件放在一起。</div><div class="line"></div><div class="line">or</div></pre></td></tr></table></figure></p>
-<p><img src="123/123.jpg" alt="123"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">图片放在 &lt;font color=#FF00&gt;.md&lt;/font&gt; 同层级的 &lt;font color=#FF00&gt;*123*&lt;/font&gt; 文件夹下。</div><div class="line"></div><div class="line">### 转义</div><div class="line"></div><div class="line">在其他字符前加 `\` 反斜线保持字符原样输出。</div><div class="line"></div><div class="line">### 表格</div></pre></td></tr></table></figure></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">物品</th>
-<th style="text-align:right">数量</th>
-<th style="text-align:center">单价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">iPhone</td>
-<td style="text-align:right">1</td>
-<td style="text-align:center">100</td>
-</tr>
-<tr>
-<td style="text-align:left">iPad</td>
-<td style="text-align:right">2</td>
-<td style="text-align:center">200</td>
-</tr>
-<tr>
-<td style="text-align:left">IPod</td>
-<td style="text-align:right">3</td>
-<td style="text-align:center">300</td>
-</tr>
-</tbody>
-</table>
-<p>```</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>用反引号 ` 来标记内联代码，如果代码的内容中有反引号，请用两个反引号包裹。<br>代码中的 &amp;、&lt;、&gt; 符号都会自动转义，请放心使用。</p>
+<h3 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h3><p>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\代码区域</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>去掉反斜线</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">代码区域</div></pre></td></tr></table></figure>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p><code>***</code></p>
+<hr>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[http://123.com](http://123.com)</div></pre></td></tr></table></figure>
+<p><a href="http://123.com" target="_blank" rel="external">http://123.com</a></p>
+<p>or</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http://123.com&gt;</div></pre></td></tr></table></figure>
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![123](123.jpg)</div></pre></td></tr></table></figure>
+<p>这种方式需要 <font color="#FF00">123.jpg</font> 和 <font color="#FF00">.md</font> 文件放在一起。</p>
+<p>or</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![123](123/123.jpg)</div></pre></td></tr></table></figure>
+<p>图片放在 <font color="#FF00">.md</font> 同层级的 <font color="#FF00"><em>123</em></font> 文件夹下。</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>在其他字符前加 <code>\</code> 反斜线保持字符原样输出。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| 物品   | 数量  | 单价  |</div><div class="line">|:-------| ----: | :---: |</div><div class="line">| iPhone | 1     | 100   |</div><div class="line">| iPad   | 2     | 200   |</div><div class="line">| IPod   | 3     | 300   |</div></pre></td></tr></table></figure>
 <p>效果</p>
 <table>
 <thead>
