@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[基于Hexo博客插入图片的Markdown语法]]></title>
       <url>%2F2017%2F03%2F24%2F%E5%9F%BA%E4%BA%8EHexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84Markdown%E8%AF%AD%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[虽然在官方语法中，Markdown插入图片的格式是这样的： 1![Alt text](img.jpg) 然而用了Hexo框架，则需要在 source 文件夹中新建一个 images 文件夹，然后把图片放在 images 文件夹里。 路径必须是这样的： 1![Alt text](/images/img.jpg) 不过有个缺点就是在Markdown的编辑器里无法实时预览。]]></content>
+      <content type="text"><![CDATA[虽然在官方语法中，Markdown插入图片的格式是这样的： 1![Alt text](img.jpg) 然而用了Hexo框架，则需要在 source 文件夹中新建一个 images 文件夹，然后把图片放在 images 文件夹里。 路径必须是这样的： 1![Alt text](/images/img.jpg) 不过有个缺点就是Markdown编辑器无法实时预览。]]></content>
     </entry>
 
     
