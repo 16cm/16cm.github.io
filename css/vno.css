@@ -5959,10 +5959,11 @@ body {
 }
 a {
   text-decoration: none;
-  color: #bf1827;
+  color: #0366d6;
 }
 a:hover {
-  color: #0366d6;
+  text-decoration: underline;
+  color: #bf1827;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
