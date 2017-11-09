@@ -19,7 +19,7 @@
     <entry>
       <title><![CDATA[MDK之ST-Link下载设置]]></title>
       <url>%2F2017%2F03%2F23%2FMDK%E4%B9%8BST-Link%E4%B8%8B%E8%BD%BD%E8%AE%BE%E7%BD%AE%2F</url>
-      <content type="text"><![CDATA[MDK支持仿真器、串口和ST-LINK下载。 1快捷键Alt+F7，然后选择 Debug ; 2点击 Settings ; 3选择 Utilities ，点击 Settings ; 设置完成后，点击下载按钮，看见 Application running… 就说明已经下载成功。]]></content>
+      <content type="text"><![CDATA[MDK支持仿真器、串口和ST-LINK下载。 1、快捷键 Alt+F7 ，然后选择 Debug ; 2、点击 Settings ; 3、选择 Utilities ，点击 Settings ; 设置完成后，点击下载按钮，看见 Application running… 就说明已经下载成功。]]></content>
     </entry>
 
     
