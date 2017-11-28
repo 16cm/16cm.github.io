@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[去掉默认打开文件的关联程序]]></title>
+      <url>%2F2017%2F11%2F28%2F%E5%8E%BB%E6%8E%89%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E8%81%94%E7%A8%8B%E5%BA%8F%2F</url>
+      <content type="text"><![CDATA[即恢复文件为无程序关联。 1、win+R，键入 regedit 回车；2、删除以下键值，建议修改前先备份一下，以 .dat 为例；12345HKEY_CLASSES_ROOT\.datHKEY_CLASSES_ROOT\dat_auto_fileHKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dat 3、按F5刷新。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[贴片电阻上数字标注的含义]]></title>
       <url>%2F2017%2F06%2F28%2F%E8%B4%B4%E7%89%87%E7%94%B5%E9%98%BB%E4%B8%8A%E6%95%B0%E5%AD%97%E6%A0%87%E6%B3%A8%E7%9A%84%E5%90%AB%E4%B9%89%2F</url>
       <content type="text"><![CDATA[贴片电阻，因其体积小，通常用3位阿拉伯数字来标注片状电阻的阻值，其中第1位数代表阻值的第1位有效数，第2位数表示阻值的第2位有效数字，第3位数字表示阻值的倍率，即在前两位数字后边加0的个数。例如202代表20后边加2个0，即2000Ω＝2kΩ；681表示在68后面加1个0，即680Ω；105表示1MΩ；100表示10Ω，不要误认为100Ω；470表示47Ω。对于带小数的欧姆级片状电阻，用R代表Ω。例如2R2代表2.2Ω，8R2代表8.Ω，R47表示0.47Ω等。另外少数片状电阻也有4位数字标注的，例如，美国的某些电器中用的片状电阻，就有标注为6801的，代表6.8kΩ。其实4位数标注法与3位数标注法的差别只是多了一位有效数，其余与3位数标注法相同。]]></content>
