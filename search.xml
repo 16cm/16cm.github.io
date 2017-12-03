@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[去掉默认打开文件的关联程序]]></title>
       <url>%2F2017%2F11%2F28%2F%E5%8E%BB%E6%8E%89%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E8%81%94%E7%A8%8B%E5%BA%8F%2F</url>
-      <content type="text"><![CDATA[即恢复文件为无程序关联。 1、Win+R，键入 regedit 回车； 2、删除以下键值，建议修改前先备份一下，以 .dat 为例； 123HKEY_CLASSES_ROOT\.datHKEY_CLASSES_ROOT\dat_auto_fileHKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dat 3、按 F5 刷新。]]></content>
+      <content type="text"><![CDATA[即恢复文件为无程序关联。 1、Win+R，键入 regedit 回车; 2、删除以下键值，建议修改前先备份一下，以 .dat 为例;123HKEY_CLASSES_ROOT\.datHKEY_CLASSES_ROOT\dat_auto_fileHKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dat 3、按 F5 刷新.]]></content>
     </entry>
 
     
