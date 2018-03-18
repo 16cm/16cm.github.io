@@ -159,25 +159,25 @@
   </header>
 
   <section class="post">
-    <p>基于Github搭建Hexo框架的博客，快速上手而且简洁高效，详见 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo文档</a> 。</p>
+    <p>基于 Github 搭建 Hexo 框架的博客，快速上手而且简洁高效，详见 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo文档</a>。</p>
 <a id="more"></a>
 <h4 id="1、Node-js"><a href="#1、Node-js" class="headerlink" title="1、Node.js"></a>1、Node.js</h4><p>下载链接：<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x86.msi" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x64.msi" target="_blank" rel="noopener">64bit</a></p>
 <p>不确定版本的话直接下载32位即可，然后保持默认设置安装。</p>
-<p>检查安装情况，win+r打开运行，输入cmd回车，输入以下代码:</p>
+<p>检查安装情况，win+r 打开运行，输入 cmd 回车，输入以下代码:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 <p>如下图所示，则说明安装正确。</p>
 <p><img src="/images/教程01.png" alt=""></p>
 <h4 id="2、Git"><a href="#2、Git" class="headerlink" title="2、Git"></a>2、Git</h4><p>下载链接：<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank" rel="noopener">64bit</a></p>
-<p>其他设置只需要保持默认，但建议PATH选项按照下图选择：</p>
+<p>其他设置只需要保持默认，但建议 PATH 选项按照下图选择：</p>
 <p><img src="/images/教程02.png" alt=""></p>
 <p>检查安装情况，输入以下代码:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
 <p>如下图所示，则说明安装正确。</p>
 <p><img src="/images/教程03.png" alt=""></p>
 <h4 id="3、Github"><a href="#3、Github" class="headerlink" title="3、Github"></a>3、Github</h4><p>打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册帐号，前往邮箱确认注册。</p>
-<p>登录帐号，点击页面右上角的+，选择 New repository ,在 Repository name 下填写 yourname.github.io ，其他可不填，然后点击 Create repository 。</p>
+<p>登录帐号，点击页面右上角的+，选择 New repository,在 Repository name 下填写 yourname.github.io，其他可不填，然后点击 Create repository。</p>
 <p><img src="/images/教程04.png" alt=""></p>
-<h4 id="4、GitHub-Pages"><a href="#4、GitHub-Pages" class="headerlink" title="4、GitHub Pages"></a>4、GitHub Pages</h4><p>现在需要手动开启 <font color="#FF0000">gh-pages</font> 功能，可以去看这里的 <a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a> ，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
+<h4 id="4、GitHub-Pages"><a href="#4、GitHub-Pages" class="headerlink" title="4、GitHub Pages"></a>4、GitHub Pages</h4><p>现在需要手动开启 <font color="#FF0000">gh-pages</font> 功能，可以去看这里的<a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a>，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
 <h4 id="5、Hexo"><a href="#5、Hexo" class="headerlink" title="5、Hexo"></a>5、Hexo</h4><p>任意盘符下新建文件夹，打开文件夹右键选择 Git Bash Here，如图：</p>
 <p><img src="/images/教程05.png" alt=""></p>
 <p>输入：</p>
@@ -193,28 +193,28 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>然后输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>等待npm安装完所需组件即可。</p>
+<p>等待 npm 安装完所需组件即可。</p>
 <p>安装完成后，再次输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>然后</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，就看见了你的博客首页。</p>
+<p>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就看见了你的博客首页。</p>
 <h4 id="6、部署博客"><a href="#6、部署博客" class="headerlink" title="6、部署博客"></a>6、部署博客</h4><p>打开命令行，然后输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"yourname"</span></span><br><span class="line">$ git config --global user.email <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
-<p>然后在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
+<p>然后在_config.yml 文件中，找到 Deployment，然后按照如下修改：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>再输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “youremail@gmail.com”</span><br><span class="line">连续按3个回车，密码为空</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /home/tekkub/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /home/tekkub/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br></pre></td></tr></table></figure>
-<p>最后打开生成的 <font color="#FF0000">id_rsa.pub</font> ，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。</p>
+<p>最后打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。</p>
 <p>输入以下代码测试：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure>
 <p>返回以下信息即表示部署成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">'github.com (207.97.227.239)'</span> can`t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to <span class="built_in">continue</span> connecting (yes/no)? yes</span><br><span class="line">Warning: Permanently added <span class="string">'github.com,207.97.227.239'</span>(RSA) to the list of known hosts.</span><br><span class="line">ERROR: Hi tekkub! You`ve successfully authenticated, but GitHub does not provide shell access</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure>
 <p>我们就可以使用以下命令发布文章了：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h4 id="7、其他"><a href="#7、其他" class="headerlink" title="7、其他"></a>7、其他</h4><p>Hexo 命令可以参考 <a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a></p>
-<p><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="noopener">参考教程</a> </p>
-<p>推荐安装 <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a> </p>
+<h4 id="7、其他"><a href="#7、其他" class="headerlink" title="7、其他"></a>7、其他</h4><p>Hexo 命令可以参考<a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a>。</p>
+<p><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="noopener">参考教程&gt;</a> </p>
+<p>推荐安装<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>。</p>
 
   </section>
 
