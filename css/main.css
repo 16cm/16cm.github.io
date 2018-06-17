@@ -1001,6 +1001,7 @@ pre .javascript .function {
 .pagination .prev,
 .pagination .next,
 .pagination .page-number {
+  color: #555;
   border-bottom: 0;
   border-top: 1px solid #eee;
   transition-property: border-color;
@@ -1824,7 +1825,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #003bc3;
+  background: #131f87;
 }
 .links-of-blogroll {
   font-size: 13px;
