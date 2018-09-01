@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[安卓版Chrome移除首页新闻推荐]]></title>
       <url>%2F2018%2F08%2F12%2F%E5%AE%89%E5%8D%93%E7%89%88Chrome%E7%A7%BB%E9%99%A4%E9%A6%96%E9%A1%B5%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90%2F</url>
-      <content type="text"><![CDATA[要用以下的方法移除首頁的新聞，同樣在網址列輸入下列網址，並將該設定「 Disabled 」：chrome://flags/#enable-ntp-remote-suggestions還有像是「最近下載過的檔案」，這時候可以到下面網址的設定關閉：chrome://flags/#enable-ntp-asset-download-suggestions關閉新分頁上的最近使用書籤，則可以到下列網址關閉：chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
+      <content type="text"><![CDATA[移除首页的新闻，在地址栏输入下列网址，然后更改为「 Disabled 」：chrome://flags/#enable-ntp-remote-suggestions移除首页的「最近下载过的档案」，输入以下网址并更改：chrome://flags/#enable-ntp-asset-download-suggestions移除首页的最近使用书签，输入以下网址并更改 ：chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
     </entry>
 
     
