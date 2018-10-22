@@ -12,21 +12,21 @@
     <entry>
       <title><![CDATA[火狐整理]]></title>
       <url>%2F2018%2F10%2F15%2F%E7%81%AB%E7%8B%90%E6%95%B4%E7%90%86%2F</url>
-      <content type="text"><![CDATA[about:config 关闭“近期聚焦”：browser.library.activity-stream.enabled 字体渲染：gfx.canvas.azure.backends;direct2d1.1,cairo,skiagfx.content.azure.backends;direct2d1.1,cairo,skiagfx.direct2d.disabled;true设置里性能那里取消勾选 使用推荐的性能设置，后取消勾选 自动启用硬件加速。然后重启火狐。]]></content>
+      <content type="text"><![CDATA[about:config 关闭近期聚焦：browser.library.activity-stream.enabled 双击关闭标签页：browser.tabs.closeTabByDblclick 字体渲染：gfx.canvas.azure.backends;direct2d1.1,cairo,skiagfx.content.azure.backends;direct2d1.1,cairo,skiagfx.direct2d.disabled;true设置里性能那里取消勾选使用推荐的性能设置，然后取消勾选自动启用硬件加速。然后重启火狐。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[安卓版Chrome移除首页新闻推荐]]></title>
       <url>%2F2018%2F08%2F12%2F%E5%AE%89%E5%8D%93%E7%89%88Chrome%E7%A7%BB%E9%99%A4%E9%A6%96%E9%A1%B5%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90%2F</url>
-      <content type="text"><![CDATA[移除首页的新闻，在地址栏输入下列网址，然后更改为「 Disabled 」：chrome://flags/#enable-ntp-remote-suggestions移除首页的「最近下载过的档案」，输入以下网址并更改：chrome://flags/#enable-ntp-asset-download-suggestions移除首页的最近使用书签，输入以下网址并更改 ：chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
+      <content type="text"><![CDATA[移除推荐的新闻，在地址栏输入下列网址，然后更改为「 Disabled 」：chrome://flags/#enable-ntp-remote-suggestions移除最近下载过的档案，输入以下网址并更改：chrome://flags/#enable-ntp-asset-download-suggestions移除最近使用书签，输入以下网址并更改 ：chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[禁止PotPlayer联网自动更新]]></title>
       <url>%2F2018%2F06%2F19%2F%E7%A6%81%E6%AD%A2PotPlayer%E8%81%94%E7%BD%91%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%2F</url>
-      <content type="text"><![CDATA[打开C:\Windows\System32\drivers\etc中的hosts文件，添加以下三行后保存。123127.0.0.1 tiara.daum.net127.0.0.1 start.tiara.daum.net127.0.0.1 get.daum.net]]></content>
+      <content type="text"><![CDATA[打开C:\Windows\System32\drivers\etc中的hosts文件，添加以下三行后保存。123127.0.0.1 tiara.daum.net127.0.0.1 start.tiara.daum.net127.0.0.1 get.daum.net 设置播放完自动退出：右键-配置-收尾处理-播放完全部后退出。]]></content>
     </entry>
 
     
