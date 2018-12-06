@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[系统折腾目录]]></title>
+      <url>%2F2018%2F12%2F06%2F%E7%B3%BB%E7%BB%9F%E6%8A%98%E8%85%BE%E7%9B%AE%E5%BD%95%2F</url>
+      <content type="text"><![CDATA[生命在于折腾！ 1、设置任务栏资源管理器默认打开为我的电脑： 关闭目前所有的资源管理器窗口，按住Shift键的同时在任务栏的资源管理器图标上右击，点选属性； 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。 2、修改计算机的Netbios名打开注册表，并找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName，在这个项下面有2个子项：ActiveComputerName和ComputerName，直接把ComputerName简直修改成想要的netbios名，然后重启。 3、锁屏界面左上角输入法更换控制面板-区域和语言-管理-复制设置，选中“欢迎屏幕和系统账户”，然后确定就可以了。 4、桌面上的IE图标删不去怎么办？ win+R运行，输入 regedit 打开注册表; HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace; 点击左上角的 文件-导出 ，随便重命名后保存导出的注册表，注册表文件的后缀名是.reg; 使用记事本打开刚刚保存的注册表，CTRL+F 查找，输入 Internet Explorer ，找到相应的项目。注意到此时的文件名编号是{B416D21B-3B22-B6D4-BBD3-BBD452DB3D5B(找不到直接删这个就好); 在注册表编辑器中找到原先查找的IE的注册信息的那个文件名，右击删除文件，刷新一下桌面，这时候IE图标就会消失了。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[修改迅雷边下边播的默认播放器]]></title>
       <url>%2F2018%2F10%2F30%2F%E4%BF%AE%E6%94%B9%E8%BF%85%E9%9B%B7%E8%BE%B9%E4%B8%8B%E8%BE%B9%E6%92%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E6%92%AD%E6%94%BE%E5%99%A8%2F</url>
       <content type="text"><![CDATA[首先打开迅雷安装路径，在Program文件夹下新建一个文本文档，将其名字和后缀名改为xmp.ini，然后文本编辑器打开，添加以下内容后保存关闭。[global]Path=D:\PotPlayer\PotPlayerMini64.exe红色字体部分为播放器的路径，按自己的修改。全部工作就已经完成，用迅雷下载视频时，点击边下边播时就会发现默认播放器已经更改为PotPlayer。]]></content>
