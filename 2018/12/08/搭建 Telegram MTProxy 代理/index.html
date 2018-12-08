@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="浏览器,">
+  <meta name="keywords" content="Telegram,">
 
 
 
@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="充值信仰，谷歌大法好。">
-<meta name="keywords" content="浏览器">
+<meta name="description" content="无聊，权当测试。">
+<meta name="keywords" content="Telegram">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chrome">
-<meta property="og:url" content="http://yoursite.com/2018/03/23/Chrome/index.html">
+<meta property="og:title" content="搭建 Telegram MTProxy 代理">
+<meta property="og:url" content="http://yoursite.com/2018/12/08/搭建 Telegram MTProxy 代理/index.html">
 <meta property="og:site_name" content="16cm">
-<meta property="og:description" content="充值信仰，谷歌大法好。">
+<meta property="og:description" content="无聊，权当测试。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-24T11:47:26.112Z">
+<meta property="og:updated_time" content="2018-12-08T13:14:27.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chrome">
-<meta name="twitter:description" content="充值信仰，谷歌大法好。">
+<meta name="twitter:title" content="搭建 Telegram MTProxy 代理">
+<meta name="twitter:description" content="无聊，权当测试。">
 
 
 
@@ -164,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/23/Chrome/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/08/搭建 Telegram MTProxy 代理/">
 
 
 
 
 
-  <title>Chrome | 16cm</title>
+  <title>搭建 Telegram MTProxy 代理 | 16cm</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/23/Chrome/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/08/搭建 Telegram MTProxy 代理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="16cm">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Chrome</h1>
+          <h1 class="post-title" itemprop="name headline">搭建 Telegram MTProxy 代理</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T20:43:17+08:00">
-                2018-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T20:05:40+08:00">
+                2018-12-08
               </time>
             
 
@@ -354,13 +354,61 @@
       
 
       
-        <p>充值信仰，谷歌大法好。</p>
+        <p>无聊，权当测试。</p>
 <a id="more"></a>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><strong>64-bit</strong><br><a href="https://www.google.com/chrome/browser/?platform=win64" target="_blank" rel="noopener">Stable channel for Windows</a><br><a href="https://www.google.com/chrome/browser/beta.html?platform=win64" target="_blank" rel="noopener">Beta channel for Windows</a><br><a href="https://www.google.com/chrome/browser/index.html?extra=devchannel&amp;platform=win64" target="_blank" rel="noopener">Dev channel for Windows</a><br><a href="https://www.google.com/chrome/browser/canary.html?platform=win64" target="_blank" rel="noopener">Canary build for Windows</a></p>
-<p><strong>32-bit</strong><br><a href="https://www.google.com/chrome/browser/?platform=win" target="_blank" rel="noopener">Stable channel for Windows</a><br><a href="https://www.google.com/chrome/browser/beta.html?platform=win" target="_blank" rel="noopener">Beta channel for Windows</a><br><a href="https://www.google.com/chrome/browser/index.html?extra=devchannel&amp;platform=win" target="_blank" rel="noopener">Dev channel for Windows</a><br><a href="https://www.google.com/chrome/browser/canary.html?platform=win" target="_blank" rel="noopener">Canary build for Windows</a></p>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>最新版本部分区域无法渲染的问题：<br>图标-属性-目标<br><code>&nbsp;–disable-directwrite-for-ui</code></p>
-<p>默认以隐身模式启动：<br>图标-属性-目标<br><code>&nbsp;–incognito</code></p>
-<p>注意以上代码前面都有一个半角空格。</p>
+<h4 id="1、安装依赖开发包openssl和zlib"><a href="#1、安装依赖开发包openssl和zlib" class="headerlink" title="1、安装依赖开发包openssl和zlib"></a>1、安装依赖开发包openssl和zlib</h4><ul>
+<li>在CentOS上:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在Debian / Ubuntu上：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure>
+<h4 id="2、克隆MTProxy的源码"><a href="#2、克隆MTProxy的源码" class="headerlink" title="2、克隆MTProxy的源码"></a>2、克隆MTProxy的源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure>
+<h4 id="3、编译安装，安装的位置在objs-bin-mtproto-proxy"><a href="#3、编译安装，安装的位置在objs-bin-mtproto-proxy" class="headerlink" title="3、编译安装，安装的位置在objs/bin/mtproto-proxy"></a>3、编译安装，安装的位置在objs/bin/mtproto-proxy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure>
+<h4 id="4、运行程序"><a href="#4、运行程序" class="headerlink" title="4、运行程序"></a>4、运行程序</h4><ul>
+<li>获取一个密钥，用于连接到电报服务器</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxySecret -o proxy-secret</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取当前的Telegram的配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成一个密钥供其他用户连接到您的代理使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -c 16 /dev/urandom | xxd -ps</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行mtproto-proxy服务器</li>
+</ul>
+<p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
+<ol>
+<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这里的443为端口号，自定义你的端口号即可，&lt; secret &gt;这里替换为第三步生成的密钥。</p>
+<h4 id="5、生成Telegram的代理快速链接"><a href="#5、生成Telegram的代理快速链接" class="headerlink" title="5、生成Telegram的代理快速链接"></a>5、生成Telegram的代理快速链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure>
+<p>SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。</p>
+<h4 id="6、服务器重启后如何重新启动代理服务"><a href="#6、服务器重启后如何重新启动代理服务" class="headerlink" title="6、服务器重启后如何重新启动代理服务"></a>6、服务器重启后如何重新启动代理服务</h4><ul>
+<li><p>进入代理服务器启动目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
+</li>
+</ul>
+<ol>
+<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
 
       
     </div>
@@ -378,7 +426,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/浏览器/" rel="tag"># 浏览器</a>
+            <a href="/tags/Telegram/" rel="tag"># Telegram</a>
           
         </div>
       
@@ -391,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/20/注册美区 Apple ID 账号指南/" rel="next" title="注册美区 Apple ID 账号指南">
-                <i class="fa fa-chevron-left"></i> 注册美区 Apple ID 账号指南
+              <a href="/2018/12/06/系统折腾目录/" rel="next" title="系统折腾目录">
+                <i class="fa fa-chevron-left"></i> 系统折腾目录
               </a>
             
           </div>
@@ -400,10 +448,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/01/清明三日游/" rel="prev" title="清明三日游">
-                清明三日游 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -528,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化"><span class="nav-number">2.</span> <span class="nav-text">优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、安装依赖开发包openssl和zlib"><span class="nav-number">1.</span> <span class="nav-text">1、安装依赖开发包openssl和zlib</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、克隆MTProxy的源码"><span class="nav-number">2.</span> <span class="nav-text">2、克隆MTProxy的源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、编译安装，安装的位置在objs-bin-mtproto-proxy"><span class="nav-number">3.</span> <span class="nav-text">3、编译安装，安装的位置在objs/bin/mtproto-proxy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、运行程序"><span class="nav-number">4.</span> <span class="nav-text">4、运行程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、生成Telegram的代理快速链接"><span class="nav-number">5.</span> <span class="nav-text">5、生成Telegram的代理快速链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、服务器重启后如何重新启动代理服务"><span class="nav-number">6.</span> <span class="nav-text">6、服务器重启后如何重新启动代理服务</span></a></li></ol></div>
             
 
           </div>
