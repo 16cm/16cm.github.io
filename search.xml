@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[火炬之光2官方翻译错误集锦]]></title>
+      <url>%2F2018%2F12%2F22%2F%E7%81%AB%E7%82%AC%E4%B9%8B%E5%85%892%E5%AE%98%E6%96%B9%E7%BF%BB%E8%AF%91%E9%94%99%E8%AF%AF%E9%9B%86%E9%94%A6%2F</url>
+      <content type="text"><![CDATA[官方中文错误太多，只好整理下。 1、装备中减少等级需求-X，其实是减少属性点需求。2、3、]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[搭建 Telegram MTProxy 代理]]></title>
       <url>%2F2018%2F12%2F08%2F%E6%90%AD%E5%BB%BA%20Telegram%20MTProxy%20%E4%BB%A3%E7%90%86%2F</url>
       <content type="text"><![CDATA[无聊，权当测试。 1、安装依赖开发包openssl和zlib 在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &quot;Development Tools&quot; 在Debian / Ubuntu上： 1apt install git curl build-essential libssl-dev zlib1g-dev 2、克隆MTProxy的源码12git clone https://github.com/TelegramMessenger/MTProxycd MTProxy 3、编译安装，安装的位置在objs/bin/mtproto-proxy1make &amp;&amp; cd objs/bin 4、运行程序 获取一个密钥，用于连接到电报服务器 1curl -s https://core.telegram.org/getProxySecret -o proxy-secret 获取当前的Telegram的配置 1curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf 生成一个密钥供其他用户连接到您的代理使用 1head -c 16 /dev/urandom | xxd -ps 运行mtproto-proxy服务器 输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令： 没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt; 这里的443为端口号，自定义你的端口号即可，&lt; secret &gt;这里替换为第三步生成的密钥。 5、生成Telegram的代理快速链接1tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。 6、服务器重启后如何重新启动代理服务 进入代理服务器启动目录 1cd MTProxy/objs/bin 输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令： 没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt; 原文链接：https://www.vediotalk.com/?p=1808]]></content>
