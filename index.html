@@ -602,8 +602,7 @@
 
       
         
-          
-            <h4 id="1、安装依赖开发包openssl和zlib"><a href="#1、安装依赖开发包openssl和zlib" class="headerlink" title="1、安装依赖开发包openssl和zlib"></a>1、安装依赖开发包openssl和zlib</h4><ul>
+          <h4 id="1、安装依赖开发包openssl和zlib"><a href="#1、安装依赖开发包openssl和zlib" class="headerlink" title="1、安装依赖开发包openssl和zlib"></a>1、安装依赖开发包openssl和zlib</h4><ul>
 <li>在CentOS上:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure>
@@ -611,53 +610,13 @@
 <li>在Debian / Ubuntu上：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure>
-<h4 id="2、克隆MTProxy的源码"><a href="#2、克隆MTProxy的源码" class="headerlink" title="2、克隆MTProxy的源码"></a>2、克隆MTProxy的源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure>
-<h4 id="3、编译安装，安装的位置在objs-bin-mtproto-proxy"><a href="#3、编译安装，安装的位置在objs-bin-mtproto-proxy" class="headerlink" title="3、编译安装，安装的位置在objs/bin/mtproto-proxy"></a>3、编译安装，安装的位置在objs/bin/mtproto-proxy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure>
-<h4 id="4、运行程序"><a href="#4、运行程序" class="headerlink" title="4、运行程序"></a>4、运行程序</h4><ul>
-<li>获取一个密钥，用于连接到电报服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxySecret -o proxy-secret</span><br></pre></td></tr></table></figure>
-<ul>
-<li>获取当前的Telegram的配置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</span><br></pre></td></tr></table></figure>
-<ul>
-<li>生成一个密钥供其他用户连接到您的代理使用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -c 16 /dev/urandom | xxd -ps</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行mtproto-proxy服务器</li>
-</ul>
-<p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
-<ol>
-<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这里的443为端口号，自定义你的端口号即可，&lt; secret &gt;这里替换为第三步生成的密钥。</p>
-<h4 id="5、生成Telegram的代理快速链接"><a href="#5、生成Telegram的代理快速链接" class="headerlink" title="5、生成Telegram的代理快速链接"></a>5、生成Telegram的代理快速链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure>
-<p>SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。</p>
-<h4 id="6、服务器重启后如何重新启动代理服务"><a href="#6、服务器重启后如何重新启动代理服务" class="headerlink" title="6、服务器重启后如何重新启动代理服务"></a>6、服务器重启后如何重新启动代理服务</h4><ul>
-<li><p>进入代理服务器启动目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
-</li>
-</ul>
-<ol>
-<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/08/搭建Telegram的MTProxy代理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1502,14 +1461,17 @@
 
       
         
-          
-            <p>5日晚到威海，6日一早吃完早餐开始出发，走路到<font color="#FF0000">海上公园</font>，然后走路到<font color="#FF0000">悦海公园</font>，再坐10路公交到<font color="#FF0000">幸福公园</font>，下车就能看见<font color="#FF0000">幸福门</font>，因为非常高，很远就能看见，坐电梯上去参观要门票35元，遂放弃。<br>然后去了<font color="#FF0000">定远舰</font>景区，门票75。<br>去<font color="#FF0000">刘公岛</font>售票厅看了下，因天气原因不开放，去吃午饭了。<br>本来打算去KFC把随身带的食物吃光，人太多了吧，一个位置都没有，只好去了另一家麦当劳，两份套餐解决。<br>下午计划在幸福公园北坐旅游观光巴士沿着<font color="#FF0000">环海路</font>去国际海水浴场，结果这趟巴士运营时间为5月1日-10月31日，伤心，转头去<font color="#FF0000">环翠楼</font>。<br>天气是真的不好，风大而且阴天，在<font color="#FF0000">环翠楼</font>上看了看威海的全貌，啥都没看到，继续赶路。<br>7日天气不错，阳光明媚的，虽然还有点风。步行到<font color="#FF0000">国际海水浴场</font>，人很少，对面就能看到山东大学几个大字，海水浴场整体建筑有点差，厕所卫生也不好，实话说比青岛的差远了，失望而归。回去的路上仔细看了附近的小区，楼与楼之间的间隔非常宽，导致采光非常好，人少，空气质量好，确实是个宜居的好地方。<br>时间还早，动身去<font color="#FF0000">里口山</font>。拦辆出租车，10公里23元，问了下爬山的情况，师傅说那就从<font color="#FF0000">广福寺</font>开始吧！行，那就从那里下车吧！结果半个小时就把广福寺逛遍了，上山的路封死了，只能下山不能上，无奈去威海北站等车回家。</p>
-<p>具体路线参考<a href="http://travelweihai.com/" target="_blank" rel="noopener">威海旅游手绘图</a></p>
-
-          
+          <p>5日晚到威海，6日一早吃完早餐开始出发，走路到<font color="#FF0000">海上公园</font>，然后走路到<font color="#FF0000">悦海公园</font>，再坐10路公交到<font color="#FF0000">幸福公园</font>，下车就能看见<font color="#FF0000">幸福门</font>，因为非常高，很远就能看见，坐电梯上去参观要门票35元，遂放弃。<br>然后去了<font color="#FF0000">定远舰</font>景区，门票75。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/01/清明三日游/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
