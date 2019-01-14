@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[您是不是要访问]]></title>
+      <url>%2F2019%2F01%2F14%2F%E6%82%A8%E6%98%AF%E4%B8%8D%E6%98%AF%E8%A6%81%E8%AE%BF%E9%97%AE%2F</url>
+      <content type="text"><![CDATA[这个问题一般是 DNS 劫持，首先在网络连接里面更换 DNS，可以设置为 114.114.114.114/114.114.115.115，然后命令行窗口输入 ipconfig/flushdns 刷新，最后在路由器 WAN 端修改 DNS 即可。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Gay Pornographic Studio]]></title>
       <url>%2F2019%2F01%2F03%2FGayPornographicStudio%2F</url>
       <content type="text"><![CDATA[NSFW Men at Play，西装控的天堂 Lucas Entertainment，场景多模特帅]]></content>
