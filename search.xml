@@ -3,9 +3,16 @@
   
     
     <entry>
-      <title><![CDATA[您是不是要访问]]></title>
-      <url>%2F2019%2F01%2F14%2F%E6%82%A8%E6%98%AF%E4%B8%8D%E6%98%AF%E8%A6%81%E8%AE%BF%E9%97%AE%2F</url>
-      <content type="text"><![CDATA[这个问题一般是 DNS 劫持，以下是解决方法：1.在网络连接里面更换 DNS，可以设置为 114.114.114.114/114.114.115.115;2.命令行窗口输入 ipconfig/flushdns 刷新;3.在路由器 WAN 端修改 DNS 。]]></content>
+      <title><![CDATA[hosts]]></title>
+      <url>%2F2019%2F01%2F16%2Fhosts%2F</url>
+      <content type="text"><![CDATA[Potplayer127.0.0.1 tiara.daum.net127.0.0.1 start.tiara.daum.net127.0.0.1 get.daum.net&lt;–! more –&gt; CorelDraw127.0.0.1 apps.corel.com127.0.0.1 mc.corel.com127.0.0.1 origin-mc.corel.com127.0.0.1 iws.corel.com127.0.0.1 hub5btmain.sandai.net Acrobat127.0.0.1 activate.adobe.com127.0.0.1 practivate.adobe.com127.0.0.1 ereg.adobe.com127.0.0.1 activate.wip3.adobe.com127.0.0.1 wip3.adobe.com127.0.0.1 3dns-3.adobe.com127.0.0.1 3dns-2.adobe.com127.0.0.1 adobe-dns.adobe.com127.0.0.1 adobe-dns-2.adobe.com127.0.0.1 adobe-dns-3.adobe.com127.0.0.1 ereg.wip3.adobe.com127.0.0.1 activate-sea.adobe.com127.0.0.1 wwis-dubc1-vip60.adobe.com127.0.0.1 activate-sjc0.adobe.com]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[解决浏览器出现您是不是要访问XX的问题]]></title>
+      <url>%2F2019%2F01%2F14%2F%E8%A7%A3%E5%86%B3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%87%BA%E7%8E%B0%E6%82%A8%E6%98%AF%E4%B8%8D%E6%98%AF%E8%A6%81%E8%AE%BF%E9%97%AEXX%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[这个问题一般是 DNS 劫持，以下是解决方法：1.在网络连接里面更换 DNS，可以设置为 114.114.114.114/114.114.115.115;2.命令行窗口输入 ipconfig/flushdns 刷新;3.在路由器 WAN 端修改 DNS。]]></content>
     </entry>
 
     
