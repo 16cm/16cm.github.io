@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="1、安装依赖开发包openssl和zlib 在CentOS上:  12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：  1apt install git curl build-essential libssl-dev zlib1g-dev">
+<meta name="description" content="1. 安装依赖开发包openssl和zlib 在CentOS上:yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：apt install git curl build-essential libssl-dev zlib1g-dev">
 <meta name="keywords" content="Telegram,MTProxy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建Telegram的MTProxy代理">
 <meta property="og:url" content="http://yoursite.com/2018/12/08/搭建Telegram的MTProxy代理/index.html">
 <meta property="og:site_name" content="16cm">
-<meta property="og:description" content="1、安装依赖开发包openssl和zlib 在CentOS上:  12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：  1apt install git curl build-essential libssl-dev zlib1g-dev">
+<meta property="og:description" content="1. 安装依赖开发包openssl和zlib 在CentOS上:yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：apt install git curl build-essential libssl-dev zlib1g-dev">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T04:17:34.594Z">
+<meta property="og:updated_time" content="2019-01-17T03:21:37.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Telegram的MTProxy代理">
-<meta name="twitter:description" content="1、安装依赖开发包openssl和zlib 在CentOS上:  12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：  1apt install git curl build-essential libssl-dev zlib1g-dev">
+<meta name="twitter:description" content="1. 安装依赖开发包openssl和zlib 在CentOS上:yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;  在Debian / Ubuntu上：apt install git curl build-essential libssl-dev zlib1g-dev">
 
 
 
@@ -354,59 +354,29 @@
       
 
       
-        <h4 id="1、安装依赖开发包openssl和zlib"><a href="#1、安装依赖开发包openssl和zlib" class="headerlink" title="1、安装依赖开发包openssl和zlib"></a>1、安装依赖开发包openssl和zlib</h4><ul>
-<li>在CentOS上:</li>
+        <h5 id="1-安装依赖开发包openssl和zlib"><a href="#1-安装依赖开发包openssl和zlib" class="headerlink" title="1. 安装依赖开发包openssl和zlib"></a>1. 安装依赖开发包openssl和zlib</h5><ul>
+<li><p>在CentOS上:<br><code>yum install openssl-devel zlib-devel</code><br><code>yum groupinstall &quot;Development Tools&quot;</code></p>
+</li>
+<li><p>在Debian / Ubuntu上：<br><code>apt install git curl build-essential libssl-dev zlib1g-dev</code></p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在Debian / Ubuntu上：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="2、克隆MTProxy的源码"><a href="#2、克隆MTProxy的源码" class="headerlink" title="2、克隆MTProxy的源码"></a>2、克隆MTProxy的源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure>
-<h4 id="3、编译安装，安装的位置在objs-bin-mtproto-proxy"><a href="#3、编译安装，安装的位置在objs-bin-mtproto-proxy" class="headerlink" title="3、编译安装，安装的位置在objs/bin/mtproto-proxy"></a>3、编译安装，安装的位置在objs/bin/mtproto-proxy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure>
-<h4 id="4、运行程序"><a href="#4、运行程序" class="headerlink" title="4、运行程序"></a>4、运行程序</h4><ul>
-<li>获取一个密钥，用于连接到电报服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxySecret -o proxy-secret</span><br></pre></td></tr></table></figure>
+<h5 id="2-克隆MTProxy的源码"><a href="#2-克隆MTProxy的源码" class="headerlink" title="2. 克隆MTProxy的源码"></a>2. 克隆MTProxy的源码</h5><p><code>git clone https://github.com/TelegramMessenger/MTProxy</code><br><code>cd MTProxy</code></p>
+<h5 id="3-编译安装，安装的位置在objs-bin-mtproto-proxy"><a href="#3-编译安装，安装的位置在objs-bin-mtproto-proxy" class="headerlink" title="3. 编译安装，安装的位置在objs/bin/mtproto-proxy"></a>3. 编译安装，安装的位置在objs/bin/mtproto-proxy</h5><p><code>make &amp;&amp; cd objs/bin</code></p>
+<h5 id="4-运行程序"><a href="#4-运行程序" class="headerlink" title="4. 运行程序"></a>4. 运行程序</h5><p>4.1 获取一个密钥，用于连接到电报服务器<br><code>curl -s https://core.telegram.org/getProxySecret -o proxy-secret</code></p>
+<p>4.2 获取当前的Telegram的配置<br><code>curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</code></p>
+<p>4.3 生成一个密钥供其他用户连接到您的代理使用<br><code>head -c 16 /dev/urandom | xxd -ps</code></p>
+<p>4.4 运行mtproto-proxy服务器<br>服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令。</p>
 <ul>
-<li>获取当前的Telegram的配置</li>
+<li>没有内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code></li>
+<li>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code><br>443为端口号，可以自定义， secret 替换为第三步生成的密钥。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</span><br></pre></td></tr></table></figure>
+<h5 id="5-生成Telegram的代理快速链接"><a href="#5-生成Telegram的代理快速链接" class="headerlink" title="5. 生成Telegram的代理快速链接"></a>5. 生成Telegram的代理快速链接</h5><p><code>tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</code><br>SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。</p>
+<h5 id="6-服务器重启后如何重新启动代理服务"><a href="#6-服务器重启后如何重新启动代理服务" class="headerlink" title="6. 服务器重启后如何重新启动代理服务"></a>6. 服务器重启后如何重新启动代理服务</h5><p>6.1 进入代理服务器启动目录<br><code>cd MTProxy/objs/bin</code><br>6.2 服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令。</p>
 <ul>
-<li>生成一个密钥供其他用户连接到您的代理使用</li>
+<li>没有内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code></li>
+<li>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -c 16 /dev/urandom | xxd -ps</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行mtproto-proxy服务器</li>
-</ul>
-<p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
-<ol>
-<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这里的443为端口号，自定义你的端口号即可，&lt; secret &gt;这里替换为第三步生成的密钥。</p>
-<h4 id="5、生成Telegram的代理快速链接"><a href="#5、生成Telegram的代理快速链接" class="headerlink" title="5、生成Telegram的代理快速链接"></a>5、生成Telegram的代理快速链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure>
-<p>SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。</p>
-<h4 id="6、服务器重启后如何重新启动代理服务"><a href="#6、服务器重启后如何重新启动代理服务" class="headerlink" title="6、服务器重启后如何重新启动代理服务"></a>6、服务器重启后如何重新启动代理服务</h4><ul>
-<li><p>进入代理服务器启动目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令：</p>
-</li>
-</ul>
-<ol>
-<li><p>没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
 
       
@@ -577,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、安装依赖开发包openssl和zlib"><span class="nav-number">1.</span> <span class="nav-text">1、安装依赖开发包openssl和zlib</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、克隆MTProxy的源码"><span class="nav-number">2.</span> <span class="nav-text">2、克隆MTProxy的源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、编译安装，安装的位置在objs-bin-mtproto-proxy"><span class="nav-number">3.</span> <span class="nav-text">3、编译安装，安装的位置在objs/bin/mtproto-proxy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、运行程序"><span class="nav-number">4.</span> <span class="nav-text">4、运行程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、生成Telegram的代理快速链接"><span class="nav-number">5.</span> <span class="nav-text">5、生成Telegram的代理快速链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、服务器重启后如何重新启动代理服务"><span class="nav-number">6.</span> <span class="nav-text">6、服务器重启后如何重新启动代理服务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-安装依赖开发包openssl和zlib"><span class="nav-number">1.</span> <span class="nav-text">1. 安装依赖开发包openssl和zlib</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-克隆MTProxy的源码"><span class="nav-number">2.</span> <span class="nav-text">2. 克隆MTProxy的源码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-编译安装，安装的位置在objs-bin-mtproto-proxy"><span class="nav-number">3.</span> <span class="nav-text">3. 编译安装，安装的位置在objs/bin/mtproto-proxy</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-运行程序"><span class="nav-number">4.</span> <span class="nav-text">4. 运行程序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-生成Telegram的代理快速链接"><span class="nav-number">5.</span> <span class="nav-text">5. 生成Telegram的代理快速链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-服务器重启后如何重新启动代理服务"><span class="nav-number">6.</span> <span class="nav-text">6. 服务器重启后如何重新启动代理服务</span></a></li></ol></div>
             
 
           </div>

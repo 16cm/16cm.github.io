@@ -5,14 +5,14 @@
     <entry>
       <title><![CDATA[hosts]]></title>
       <url>%2F2019%2F01%2F16%2Fhosts%2F</url>
-      <content type="text"><![CDATA[Potplayer127.0.0.1 tiara.daum.net127.0.0.1 start.tiara.daum.net127.0.0.1 get.daum.netCorelDraw127.0.0.1 apps.corel.com127.0.0.1 mc.corel.com127.0.0.1 origin-mc.corel.com127.0.0.1 iws.corel.com127.0.0.1 hub5btmain.sandai.netAcrobat127.0.0.1 activate.adobe.com127.0.0.1 practivate.adobe.com127.0.0.1 ereg.adobe.com127.0.0.1 activate.wip3.adobe.com127.0.0.1 wip3.adobe.com127.0.0.1 3dns-3.adobe.com127.0.0.1 3dns-2.adobe.com127.0.0.1 adobe-dns.adobe.com127.0.0.1 adobe-dns-2.adobe.com127.0.0.1 adobe-dns-3.adobe.com127.0.0.1 ereg.wip3.adobe.com127.0.0.1 activate-sea.adobe.com127.0.0.1 wwis-dubc1-vip60.adobe.com127.0.0.1 activate-sjc0.adobe.com]]></content>
+      <content type="text"><![CDATA[# Potplayer127.0.0.1 tiara.daum.net127.0.0.1 start.tiara.daum.net127.0.0.1 get.daum.net# CorelDraw127.0.0.1 apps.corel.com127.0.0.1 mc.corel.com127.0.0.1 origin-mc.corel.com127.0.0.1 iws.corel.com127.0.0.1 hub5btmain.sandai.net# Acrobat127.0.0.1 activate.adobe.com127.0.0.1 practivate.adobe.com127.0.0.1 ereg.adobe.com127.0.0.1 activate.wip3.adobe.com127.0.0.1 wip3.adobe.com127.0.0.1 3dns-3.adobe.com127.0.0.1 3dns-2.adobe.com127.0.0.1 adobe-dns.adobe.com127.0.0.1 adobe-dns-2.adobe.com127.0.0.1 adobe-dns-3.adobe.com127.0.0.1 ereg.wip3.adobe.com127.0.0.1 activate-sea.adobe.com127.0.0.1 wwis-dubc1-vip60.adobe.com127.0.0.1 activate-sjc0.adobe.com]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[解决浏览器出现您是不是要访问XX的问题]]></title>
       <url>%2F2019%2F01%2F14%2F%E8%A7%A3%E5%86%B3%E6%B5%8F%E8%A7%88%E5%99%A8%E5%87%BA%E7%8E%B0%E6%82%A8%E6%98%AF%E4%B8%8D%E6%98%AF%E8%A6%81%E8%AE%BF%E9%97%AEXX%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
-      <content type="text"><![CDATA[这个问题一般是 DNS 劫持，以下是解决方法：1.在网络连接里面更换 DNS，可以设置为 114.114.114.114/114.114.115.115;2.命令行窗口输入 ipconfig/flushdns 刷新;3.在路由器 WAN 端修改 DNS。]]></content>
+      <content type="text"><![CDATA[这个问题一般是 DNS 劫持，以下是解决方法： 在网络连接里面更换 DNS，可以设置为 114.114.114.114/114.114.115.115; 命令行窗口输入 ipconfig/flushdns 刷新; 在路由器 WAN 端修改 DNS。]]></content>
     </entry>
 
     
@@ -26,21 +26,21 @@
     <entry>
       <title><![CDATA[火炬之光2官方翻译错误集锦]]></title>
       <url>%2F2018%2F12%2F22%2F%E7%81%AB%E7%82%AC%E4%B9%8B%E5%85%892%E5%AE%98%E6%96%B9%E7%BF%BB%E8%AF%91%E9%94%99%E8%AF%AF%E9%9B%86%E9%94%A6%2F</url>
-      <content type="text"><![CDATA[1、装备中减少等级需求-X，其实是减少属性点需求。 2、类似34米内每一个怪物减少5%的物品伤害，其实距离只有3米。 3、物品伤害=&gt;物理伤害]]></content>
+      <content type="text"><![CDATA[装备中减少等级需求-X，其实是减少属性点需求。 类似34米内每一个怪物减少5%的物品伤害，其实距离只有3米。 物品伤害 -&gt; 物理伤害]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[搭建Telegram的MTProxy代理]]></title>
       <url>%2F2018%2F12%2F08%2F%E6%90%AD%E5%BB%BATelegram%E7%9A%84MTProxy%E4%BB%A3%E7%90%86%2F</url>
-      <content type="text"><![CDATA[1、安装依赖开发包openssl和zlib 在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &quot;Development Tools&quot; 在Debian / Ubuntu上： 1apt install git curl build-essential libssl-dev zlib1g-dev 2、克隆MTProxy的源码12git clone https://github.com/TelegramMessenger/MTProxycd MTProxy 3、编译安装，安装的位置在objs/bin/mtproto-proxy1make &amp;&amp; cd objs/bin 4、运行程序 获取一个密钥，用于连接到电报服务器 1curl -s https://core.telegram.org/getProxySecret -o proxy-secret 获取当前的Telegram的配置 1curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf 生成一个密钥供其他用户连接到您的代理使用 1head -c 16 /dev/urandom | xxd -ps 运行mtproto-proxy服务器 输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令： 没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt; 这里的443为端口号，自定义你的端口号即可，&lt; secret &gt;这里替换为第三步生成的密钥。 5、生成Telegram的代理快速链接1tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET SERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。 6、服务器重启后如何重新启动代理服务 进入代理服务器启动目录 1cd MTProxy/objs/bin 输入启动命令,如果你的服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令： 没有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令&lt; secret &gt;这里替换为之前生成的密钥，&lt;内网IP&gt;:&lt;公网IP&gt;替换为你服务器的内网IP和公网IP，注意&lt;&gt;这个括号是不要的 1./mtproto-proxy -u nobody -p 8888 -H 443 -S &lt; secret &gt; --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info &lt;内网IP&gt;:&lt;公网IP&gt; 原文链接：https://www.vediotalk.com/?p=1808]]></content>
+      <content type="text"><![CDATA[1. 安装依赖开发包openssl和zlib 在CentOS上:yum install openssl-devel zlib-develyum groupinstall &quot;Development Tools&quot; 在Debian / Ubuntu上：apt install git curl build-essential libssl-dev zlib1g-dev 2. 克隆MTProxy的源码git clone https://github.com/TelegramMessenger/MTProxycd MTProxy 3. 编译安装，安装的位置在objs/bin/mtproto-proxymake &amp;&amp; cd objs/bin 4. 运行程序4.1 获取一个密钥，用于连接到电报服务器curl -s https://core.telegram.org/getProxySecret -o proxy-secret 4.2 获取当前的Telegram的配置curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf 4.3 生成一个密钥供其他用户连接到您的代理使用head -c 16 /dev/urandom | xxd -ps 4.4 运行mtproto-proxy服务器服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令。 没有内网IP的启动命令，secret 这里替换为之前生成的密钥。./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP443为端口号，可以自定义， secret 替换为第三步生成的密钥。 5. 生成Telegram的代理快速链接tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRETSERVER_NAME修改为你服务器的地址，PORT修改为你的端口号，SECRET修改为之前生成的密钥。 6. 服务器重启后如何重新启动代理服务6.1 进入代理服务器启动目录cd MTProxy/objs/bin6.2 服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，那么启动命令请用第二条启动命令。 没有内网IP的启动命令，secret 这里替换为之前生成的密钥。./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP 原文链接：https://www.vediotalk.com/?p=1808]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[系统折腾目录]]></title>
       <url>%2F2018%2F12%2F06%2F%E7%B3%BB%E7%BB%9F%E6%8A%98%E8%85%BE%E7%9B%AE%E5%BD%95%2F</url>
-      <content type="text"><![CDATA[生命在于折腾！ 1、设置任务栏资源管理器默认打开为我的电脑： 关闭目前所有的资源管理器窗口，按住Shift键的同时在任务栏的资源管理器图标上右击，点选属性； 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。 2、修改计算机的Netbios名打开注册表，并找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName，在这个项下面有2个子项：ActiveComputerName和ComputerName，直接把ComputerName简直修改成想要的netbios名，然后重启。 3、锁屏界面左上角输入法更换控制面板-区域和语言-管理-复制设置，选中“欢迎屏幕和系统账户”，然后确定就可以了。 4、桌面上的IE图标删不去怎么办？ win+R运行，输入 regedit 打开注册表; HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace; 点击左上角的 文件-导出 ，随便重命名后保存导出的注册表，注册表文件的后缀名是.reg; 使用记事本打开刚刚保存的注册表，CTRL+F 查找，输入 Internet Explorer ，找到相应的项目。注意到此时的文件名编号是{B416D21B-3B22-B6D4-BBD3-BBD452DB3D5B(找不到直接删这个就好); 在注册表编辑器中找到原先查找的IE的注册信息的那个文件名，右击删除文件，刷新一下桌面，这时候IE图标就会消失了。]]></content>
+      <content type="text"><![CDATA[1. 设置任务栏资源管理器默认打开为我的电脑1.1 关闭目前所有的资源管理器窗口，按住 Shift键 的同时在任务栏的资源管理器图标上右击，点选属性；1.2 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。 2. 修改计算机的Netbios名打开注册表，并找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName，在这个项下面有2个子项：ActiveComputerName和ComputerName，直接把ComputerName简直修改成想要的netbios名，然后重启。 3. 锁屏界面左上角输入法更换控制面板-区域和语言-管理-复制设置，选中“欢迎屏幕和系统账户”，然后确定就可以了。 4. 桌面上的IE图标删不去怎么办？4.1 win+R运行，输入 regedit 打开注册表。 4.2 HKEY_*_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace。 4.3 点击左上角的 文件-导出 ，随便重命名后保存导出的注册表，注册表文件的后缀名是.reg。 4.4 使用记事本打开刚刚保存的注册表，CTRL+F 查找，输入 Internet Explorer ，找到相应的项目。注意到此时的文件名编号是{B416D21B-3B22-B6D4-BBD3-BBD452DB3D5B}，找不到直接删这个就好。 4.5 在注册表编辑器中找到原先查找的IE的注册信息的那个文件名，右击删除文件，刷新一下桌面，这时候IE图标就会消失了。]]></content>
     </entry>
 
     
@@ -54,21 +54,21 @@
     <entry>
       <title><![CDATA[步骤记录器]]></title>
       <url>%2F2018%2F10%2F15%2F%E6%AD%A5%E9%AA%A4%E8%AE%B0%E5%BD%95%E5%99%A8%2F</url>
-      <content type="text"><![CDATA[按键盘上的win+R组合键，输入psr.exe，按回车键，打开问题步骤记录器。]]></content>
+      <content type="text"><![CDATA[按键盘上的 win+R 组合键，输入 psr.exe 后回车键，打开问题步骤记录器。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[火狐整理]]></title>
-      <url>%2F2018%2F10%2F15%2F%E7%81%AB%E7%8B%90%E6%95%B4%E7%90%86%2F</url>
-      <content type="text"><![CDATA[about:config 关闭近期聚焦：browser.library.activity-stream.enabled 双击关闭标签页：browser.tabs.closeTabByDblclick 字体渲染：gfx.canvas.azure.backends;direct2d1.1,cairo,skiagfx.content.azure.backends;direct2d1.1,cairo,skiagfx.direct2d.disabled;true设置里性能那里取消勾选使用推荐的性能设置，然后取消勾选自动启用硬件加速。然后重启火狐。]]></content>
+      <title><![CDATA[Firefox Config]]></title>
+      <url>%2F2018%2F10%2F15%2FFirefox%2F</url>
+      <content type="text"><![CDATA[地址栏输入 about:config 后回车。 搜索一下内容，双击切换。2.1 关闭近期聚焦：browser.library.activity-stream.enabled2.2 双击关闭标签页：browser.tabs.closeTabByDblclick2.3 字体渲染：&emsp;&emsp;gfx.canvas.azure.backends;direct2d1.1,cairo,skia&emsp;&emsp;gfx.content.azure.backends;direct2d1.1,cairo,skia&emsp;&emsp;gfx.direct2d.disabled;true&emsp;&emsp;设置里性能那里取消勾选使用推荐的性能设置，然后取消勾选自动启用硬件加速。 重启火狐。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[安卓版Chrome移除首页新闻推荐]]></title>
       <url>%2F2018%2F08%2F12%2F%E5%AE%89%E5%8D%93%E7%89%88Chrome%E7%A7%BB%E9%99%A4%E9%A6%96%E9%A1%B5%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90%2F</url>
-      <content type="text"><![CDATA[移除推荐的新闻，在地址栏输入下列网址，然后更改为「 Disabled 」：chrome://flags/#enable-ntp-remote-suggestions移除最近下载过的档案，输入以下网址并更改：chrome://flags/#enable-ntp-asset-download-suggestions移除最近使用书签，输入以下网址并更改 ：chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
+      <content type="text"><![CDATA[在地址栏输入下列网址，然后更改为「 Disabled 」： 移除推荐的新闻chrome://flags/#enable-ntp-remote-suggestions 移除最近下载过的档案chrome://flags/#enable-ntp-asset-download-suggestions 移除最近使用书签chrome://flags/#enable-ntp-bookmark-suggestions]]></content>
     </entry>
 
     
@@ -152,7 +152,7 @@
     <entry>
       <title><![CDATA[Markdown语法]]></title>
       <url>%2F2017%2F01%2F10%2FMarkdown%E8%AF%AD%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[一些常用的 Markdown 语法。 01、段落一行就是一个段落，如果要另起一行，在两个段落之间添加一个空行即可。 02、斜体*斜体* -&gt; 斜体 03、粗体**粗体** -&gt; 粗体***斜体+粗体*** -&gt; 斜体+粗体 04、上标n&lt;sup&gt;2&lt;/sup&gt; -&gt; n2 05、下标a=log&lt;sub&gt;2&lt;/sub&gt;b -&gt; a=log2b 06、函数&amp;fnof;(x)=x+1 -&gt; &fnof;(x)=x+1 07、根号&amp;radic;5 -&gt; &radic;5 08、角度30&amp;deg; -&gt; 30&deg; 09、标题# 这是 H1 ### 这是 H2 ##### 这是 H3 ###...###### 这是 H5 ###### 这是 H1这是 H2这是 H3… 这是 H510、引用&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。or&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。&gt;&gt;任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。 任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 11、列表11.1无序列表* 第一条* 第二条* 第三条 第一条 第二条 第三条 11.2有序列表1. 第一条2. 第二条3. 第三条 第一条 第二条 第三条 12、代码用反引号 ` 来标记内联代码，如果代码的内容中有反引号，请用两个反引号包裹。代码中的 &amp;、&lt;、&gt; 符号都会自动转义，请放心使用。 13、代码区域1代码区域 14、分隔线*** 15、链接1[http://123.com](http://123.com) http://123.com or1&lt;http://123.com&gt; 16、图像1![123](123.jpg) 这种方式需要 123.jpg 和 .md 文件放在一起。 or1![123](123/123.jpg) 图片放在 .md 同层级的 123 文件夹下。 17、转义在其他字符前加 \ 反斜线保持字符原样输出。 18、表格12345| Item | Value | Qty || :------- | --------: | :---: || Computer | 1600 USD | 5 || Phone | 12 USD | 12 || Pipe | 1 USD | 234 | 注意: 使用 : 控制对齐方式。]]></content>
+      <content type="text"><![CDATA[一些常用的 Markdown 语法。 01. 段落一行就是一个段落，如果要另起一行，在两个段落之间添加一个空行即可。 02.斜体*斜体* -&gt; 斜体 03. 粗体**粗体** -&gt; 粗体***斜体+粗体*** -&gt; 斜体+粗体 04. 上标n&lt;sup&gt;2&lt;/sup&gt; -&gt; n2 05. 下标a=log&lt;sub&gt;2&lt;/sub&gt;b -&gt; a=log2b 06. 函数&amp;fnof;(x)=x+1 -&gt; &fnof;(x)=x+1 07. 根号&amp;radic;5 -&gt; &radic;5 08. 角度30&amp;deg; -&gt; 30&deg; 09. 标题# 这是 H1 ### 这是 H2 ##### 这是 H3 ###...###### 这是 H5 ###### 这是 H1这是 H2这是 H3… 这是 H610. 引用&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 or &gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。&gt;&gt;任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。 任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。 11. 列表11.1 无序列表* 第一条* 第二条* 第三条 第一条 第二条 第三条 11.2 有序列表1. 第一条2. 第二条3. 第三条 第一条 第二条 第三条 12. 代码用反引号 ` 来标记内联代码，如果代码的内容中有反引号，请用两个反引号包裹。代码中的 &amp;、&lt;、&gt; 符号都会自动转义，请放心使用。 13. 代码区域1代码区域 14. 分隔线*** 15. 链接[http://123.com](http://123.com) or &lt;http://123.com&gt; 16. 图像![123](123.jpg)这种方式需要 123.jpg 和 .md 文件放在一起。or![123](123/123.jpg)图片放在 .md 同层级的 123 文件夹下。 17. 转义在其他字符前加 \ 反斜线保持字符原样输出。 18. 首行缩进18.1 半角空格&amp;ensp;18.2 全角空格&amp;emsp;]]></content>
     </entry>
 
     

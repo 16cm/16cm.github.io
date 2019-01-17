@@ -123,13 +123,13 @@
 
 
 
-<meta name="description" content="生命在于折腾！">
+<meta name="description" content="1. 设置任务栏资源管理器默认打开为我的电脑1.1 关闭目前所有的资源管理器窗口，按住 Shift键 的同时在任务栏的资源管理器图标上右击，点选属性；1.2 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。">
 <meta name="keywords" content="系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="系统折腾目录">
 <meta property="og:url" content="http://yoursite.com/2018/12/06/系统折腾目录/index.html">
 <meta property="og:site_name" content="16cm">
-<meta property="og:description" content="生命在于折腾！">
+<meta property="og:description" content="1. 设置任务栏资源管理器默认打开为我的电脑1.1 关闭目前所有的资源管理器窗口，按住 Shift键 的同时在任务栏的资源管理器图标上右击，点选属性；1.2 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/系统折腾目录1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/系统折腾目录2.jpg">
@@ -137,10 +137,10 @@
 <meta property="og:image" content="http://yoursite.com/images/系统折腾目录4.jpg">
 <meta property="og:image" content="http://yoursite.com/images/系统折腾目录5.jpg">
 <meta property="og:image" content="http://yoursite.com/images/系统折腾目录6.jpg">
-<meta property="og:updated_time" content="2018-12-06T12:33:36.652Z">
+<meta property="og:updated_time" content="2019-01-17T03:27:16.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统折腾目录">
-<meta name="twitter:description" content="生命在于折腾！">
+<meta name="twitter:description" content="1. 设置任务栏资源管理器默认打开为我的电脑1.1 关闭目前所有的资源管理器窗口，按住 Shift键 的同时在任务栏的资源管理器图标上右击，点选属性；1.2 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。">
 <meta name="twitter:image" content="http://yoursite.com/images/系统折腾目录1.jpg">
 
 
@@ -361,21 +361,15 @@
       
 
       
-        <p>生命在于折腾！</p>
-<a id="more"></a>
-<h4 id="1、设置任务栏资源管理器默认打开为我的电脑："><a href="#1、设置任务栏资源管理器默认打开为我的电脑：" class="headerlink" title="1、设置任务栏资源管理器默认打开为我的电脑："></a>1、设置任务栏资源管理器默认打开为我的电脑：</h4><ul>
-<li>关闭目前所有的资源管理器窗口，按住Shift键的同时在任务栏的资源管理器图标上右击，点选属性；</li>
-<li>在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。</li>
-</ul>
-<h4 id="2、修改计算机的Netbios名"><a href="#2、修改计算机的Netbios名" class="headerlink" title="2、修改计算机的Netbios名"></a>2、修改计算机的Netbios名</h4><p>打开注册表，并找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName，在这个项下面有2个子项：ActiveComputerName和ComputerName，直接把ComputerName简直修改成想要的netbios名，然后重启。<br><img src="/images/系统折腾目录1.jpg" alt=""></p>
-<h4 id="3、锁屏界面左上角输入法更换"><a href="#3、锁屏界面左上角输入法更换" class="headerlink" title="3、锁屏界面左上角输入法更换"></a>3、锁屏界面左上角输入法更换</h4><p>控制面板-区域和语言-管理-复制设置，选中“欢迎屏幕和系统账户”，然后确定就可以了。</p>
-<h4 id="4、桌面上的IE图标删不去怎么办？"><a href="#4、桌面上的IE图标删不去怎么办？" class="headerlink" title="4、桌面上的IE图标删不去怎么办？"></a>4、桌面上的IE图标删不去怎么办？</h4><ul>
-<li>win+R运行，输入 regedit 打开注册表;<br><img src="/images/系统折腾目录2.jpg" alt=""></li>
-<li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace;<br><img src="/images/系统折腾目录3.jpg" alt=""></li>
-<li>点击左上角的 文件-导出 ，随便重命名后保存导出的注册表，注册表文件的后缀名是.reg;<br><img src="/images/系统折腾目录4.jpg" alt=""></li>
-<li>使用记事本打开刚刚保存的注册表，CTRL+F 查找，输入 Internet Explorer ，找到相应的项目。注意到此时的文件名编号是{B416D21B-3B22-B6D4-BBD3-BBD452DB3D5B(找不到直接删这个就好);<br><img src="/images/系统折腾目录5.jpg" alt=""></li>
-<li>在注册表编辑器中找到原先查找的IE的注册信息的那个文件名，右击删除文件，刷新一下桌面，这时候IE图标就会消失了。<br><img src="/images/系统折腾目录6.jpg" alt=""></li>
-</ul>
+        <h5 id="1-设置任务栏资源管理器默认打开为我的电脑"><a href="#1-设置任务栏资源管理器默认打开为我的电脑" class="headerlink" title="1. 设置任务栏资源管理器默认打开为我的电脑"></a>1. 设置任务栏资源管理器默认打开为我的电脑</h5><p>1.1 关闭目前所有的资源管理器窗口，按住 Shift键 的同时在任务栏的资源管理器图标上右击，点选属性；<br>1.2 在目标 %windir%\explorer.exe 的后面加“ ,”，然后保存。<a id="more"></a></p>
+<h5 id="2-修改计算机的Netbios名"><a href="#2-修改计算机的Netbios名" class="headerlink" title="2. 修改计算机的Netbios名"></a>2. 修改计算机的Netbios名</h5><p>打开注册表，并找到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName，在这个项下面有2个子项：ActiveComputerName和ComputerName，直接把ComputerName简直修改成想要的netbios名，然后重启。<br><img src="/images/系统折腾目录1.jpg" alt=""></p>
+<h5 id="3-锁屏界面左上角输入法更换"><a href="#3-锁屏界面左上角输入法更换" class="headerlink" title="3. 锁屏界面左上角输入法更换"></a>3. 锁屏界面左上角输入法更换</h5><p>控制面板-区域和语言-管理-复制设置，选中“欢迎屏幕和系统账户”，然后确定就可以了。</p>
+<h5 id="4-桌面上的IE图标删不去怎么办？"><a href="#4-桌面上的IE图标删不去怎么办？" class="headerlink" title="4. 桌面上的IE图标删不去怎么办？"></a>4. 桌面上的IE图标删不去怎么办？</h5><p>4.1 win+R运行，输入 regedit 打开注册表。</p>
+<p><img src="/images/系统折腾目录2.jpg" alt=""><br>4.2 HKEY_*_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace。</p>
+<p><img src="/images/系统折腾目录3.jpg" alt=""><br>4.3 点击左上角的 文件-导出 ，随便重命名后保存导出的注册表，注册表文件的后缀名是.reg。</p>
+<p><img src="/images/系统折腾目录4.jpg" alt=""><br>4.4 使用记事本打开刚刚保存的注册表，CTRL+F 查找，输入 Internet Explorer ，找到相应的项目。注意到此时的文件名编号是{B416D21B-3B22-B6D4-BBD3-BBD452DB3D5B}，找不到直接删这个就好。</p>
+<p><img src="/images/系统折腾目录5.jpg" alt=""><br>4.5 在注册表编辑器中找到原先查找的IE的注册信息的那个文件名，右击删除文件，刷新一下桌面，这时候IE图标就会消失了。</p>
+<p><img src="/images/系统折腾目录6.jpg" alt=""></p>
 
       
     </div>
@@ -543,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、设置任务栏资源管理器默认打开为我的电脑："><span class="nav-number">1.</span> <span class="nav-text">1、设置任务栏资源管理器默认打开为我的电脑：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、修改计算机的Netbios名"><span class="nav-number">2.</span> <span class="nav-text">2、修改计算机的Netbios名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、锁屏界面左上角输入法更换"><span class="nav-number">3.</span> <span class="nav-text">3、锁屏界面左上角输入法更换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、桌面上的IE图标删不去怎么办？"><span class="nav-number">4.</span> <span class="nav-text">4、桌面上的IE图标删不去怎么办？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-设置任务栏资源管理器默认打开为我的电脑"><span class="nav-number">1.</span> <span class="nav-text">1. 设置任务栏资源管理器默认打开为我的电脑</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-修改计算机的Netbios名"><span class="nav-number">2.</span> <span class="nav-text">2. 修改计算机的Netbios名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-锁屏界面左上角输入法更换"><span class="nav-number">3.</span> <span class="nav-text">3. 锁屏界面左上角输入法更换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-桌面上的IE图标删不去怎么办？"><span class="nav-number">4.</span> <span class="nav-text">4. 桌面上的IE图标删不去怎么办？</span></a></li></ol></div>
             
 
           </div>
