@@ -30,6 +30,8 @@
 
     
 
+    
+    
     <meta name="generator" content="hexo"/>
     
     <link rel="alternate" type="application/rss+xml" title="16cm" href="https://github.com/16cm">
@@ -55,18 +57,20 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
-        <a href="/" title="前往 16cm 的主页"><img src="/images/logo.jpg" width="80" alt="16cm logo" class="panel-cover__logo logo"></a>
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 16cm">16cm</a></h1>
+        <a href="/" title="前往 16cm 的主页"><img src="/images/logo.png" width="80" alt="16cm logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="前往 16cm 的主页">16cm</a></h1>
         
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">Contact me<br> cloudmusicservice@outlook.com</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
-
+        
         <div class="navigation-wrapper">
           <div>
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+              <li class="navigation__item"><a href="/#blog" title="" class="blog-button">文章</a></li>
+            
+              <li class="navigation__item"><a href="/archives">归档</a></li>
             
             </ul>
           </nav>
@@ -82,7 +86,7 @@
       <i class="social fa fa-weibo"></i>
       <span class="label">Weibo</span>
     </a>
-  </li> 
+  </li>
 
 
   <!-- Github -->
@@ -110,7 +114,7 @@
 
 <!-- Facebook -->
 
-  
+
 <!-- Twitter -->
 
   <li class="navigation__item">
@@ -120,7 +124,8 @@
     </a>
   </li>
 
-  
+<!-- instagram -->
+
 
   <li class="navigation__item">
     <a href="https://github.com/16cm" title="RSS" target="_blank">
@@ -145,38 +150,40 @@
   </div>
 </header>
 
+
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
+            <div class="archives">
+
+
+
+  
   
     
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/12/08/搭建Telegram的MTProxy代理/" title="link to post.title">搭建Telegram的MTProxy代理</a></h2>
-      <p class="excerpt">
     
-      1. 安装依赖开发包openssl和zlib
-在CentOS上:yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot;
-
-在Debian / Ubuntu上：apt install git curl build-essential libssl-dev zlib1g-dev
-
-
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-12-08T12:05:40.000Z" class="post-list__meta--date date">2018-12-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/MTProxy/">MTProxy</a>, <a class="tag-link" href="/tags/Telegram/">Telegram</a>
-</span><a class="btn-border-small" href="/2018/12/08/搭建Telegram的MTProxy代理/">继续阅读</a></div>
-      <hr class="post-list__divider">
-    </li>
+    <section class="archive-list__wrap">
+      <div class="archive-list__year-wrap">
+        <a href="/archives/2018" class="archive-list__year">2018</a>
+      </div>
+      <div class="archive-list">
   
-    
-  </ol>
+  
+  <div class="archive-list__item">
+    <div class="archive-list__date-wrap">
+      <time datetime="2018-12-08T12:05:40.000Z" class="archive-list__date">2018-12-08</time>
 
+    </div>
+  <div class="archive-list__title-wrap">
+  <a href="/2018/12/08/搭建Telegram的MTProxy代理/" title="link to post.title" class="archive-list__title">搭建Telegram的MTProxy代理</a>
+  </div>
+  </div>
 
 
 </div>
+</section>
 
+
+</div>
 
 
             <footer class="footer">
@@ -188,7 +195,7 @@
         </div>
     </div>
 
-    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="/js/main.js"></script>
 
      
