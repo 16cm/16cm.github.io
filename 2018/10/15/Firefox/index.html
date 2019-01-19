@@ -169,7 +169,7 @@
   <section class="post">
     <ol>
 <li>地址栏输入 about:config 后回车。</li>
-<li>搜索一下内容，双击切换。<br>2.1 关闭近期聚焦：browser.library.activity-stream.enabled<br>2.2 双击关闭标签页：browser.tabs.closeTabByDblclick<br>2.3 字体渲染：<br>&emsp;&emsp;gfx.canvas.azure.backends;direct2d1.1,cairo,skia<br>&emsp;&emsp;gfx.content.azure.backends;direct2d1.1,cairo,skia<br>&emsp;&emsp;gfx.direct2d.disabled;true<br>&emsp;&emsp;设置里性能那里取消勾选<font color="#FF0000">使用推荐的性能设置</font>，然后取消勾选<font color="#FF0000">自动启用硬件加速</font>。</li>
+<li>搜索一下内容，双击切换。<br>2.1 关闭近期聚焦<br><code>browser.library.activity-stream.enabled</code><br>2.2 双击关闭标签页<br><code>browser.tabs.closeTabByDblclick</code><br>2.3 字体渲染，设置-性能取消勾选<font color="#FF0000">使用推荐的性能设置</font> + <font color="#FF0000">自动启用硬件加速</font>。<br><code>gfx.canvas.azure.backends;direct2d1.1,cairo,skia</code><br><code>gfx.content.azure.backends;direct2d1.1,cairo,skia</code><br><code>gfx.direct2d.disabled;true</code></li>
 <li>重启火狐。</li>
 </ol>
 
