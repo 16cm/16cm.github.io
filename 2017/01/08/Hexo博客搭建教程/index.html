@@ -82,7 +82,7 @@
   <!-- Weibo-->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="我的微博" target="_blank">
+    <a href="https://github.com/16cm" title="Weibo" target="_blank">
       <i class="social fa fa-weibo"></i>
       <span class="label">Weibo</span>
     </a>
@@ -92,7 +92,7 @@
   <!-- Github -->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="查看我的GitHub主页" target="_blank">
+    <a href="https://github.com/16cm" title="GitHub" target="_blank">
       <i class="social fa fa-github"></i>
       <span class="label">Github</span>
     </a>
@@ -118,7 +118,7 @@
 <!-- Twitter -->
 
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="上Twitter找我" target="_blank">
+    <a href="https://github.com/16cm" title="Twitter" target="_blank">
       <i class="social fa fa-twitter"></i>
       <span class="label">Twitter</span>
     </a>
@@ -169,15 +169,13 @@
   <section class="post">
     <p>基于 Github 搭建 Hexo 框架的博客，快速上手而且简洁高效，详见 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo文档</a>。</p>
 <a id="more"></a>
-<h4 id="1、Node-js"><a href="#1、Node-js" class="headerlink" title="1、Node.js"></a>1、Node.js</h4><p>下载链接：<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x86.msi" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x64.msi" target="_blank" rel="noopener">64bit</a><br>不确定版本的话直接下载32位即可，然后保持默认设置安装。<br>检查安装情况，win+r 打开运行，输入 cmd 回车，输入以下代码:<br><code>node -v</code><br><code>npm -v</code><br>如下图所示，则说明安装正确。<br><img src="/images/教程01.png" alt=""></p>
-<h4 id="2、Git"><a href="#2、Git" class="headerlink" title="2、Git"></a>2、Git</h4><p>下载链接：<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank" rel="noopener">64bit</a><br>其他设置只需要保持默认，但建议 PATH 选项按照下图选择：<br><img src="/images/教程02.png" alt=""><br>检查安装情况，输入以下代码:<br><code>git --version</code><br>如下图所示，则说明安装正确。<br><img src="/images/教程03.png" alt=""></p>
-<h4 id="3、Github"><a href="#3、Github" class="headerlink" title="3、Github"></a>3、Github</h4><p>打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册帐号，前往邮箱确认注册。<br>登录帐号，点击页面右上角的+，选择 New repository，注意在 Repository name 下必须填写为 yourname.github.io，其他可不填，然后点击 Create repository。<br><img src="/images/教程04.png" alt=""></p>
-<h4 id="4、GitHub-Pages"><a href="#4、GitHub-Pages" class="headerlink" title="4、GitHub Pages"></a>4、GitHub Pages</h4><p>可以去看这里的<a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a>，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
-<h4 id="5、Hexo"><a href="#5、Hexo" class="headerlink" title="5、Hexo"></a>5、Hexo</h4><p>任意盘符下新建文件夹，打开文件夹右键选择 Git Bash Here，如图：<br><img src="/images/教程05.png" alt=""><br>输入：<br><code>npm install hexo-cli -g</code><br>看到下图，继续输入：<br><img src="/images/教程06.png" alt=""><br><code>npm install hexo --save</code><br>结束后输入：<br><code>hexo -v</code><br>看到下图就说明安装成功。<br><img src="/images/教程07.png" alt=""><br>输入以下代码初始化：<br><code>hexo init</code><br>然后输入：<br><code>npm install</code><br>等待 npm 安装完所需组件即可。<br>安装完成后，再次输入：<br><code>hexo g</code><br>然后<br><code>hexo s</code><br>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就看见了你的博客首页。</p>
-<h4 id="6、部署博客"><a href="#6、部署博客" class="headerlink" title="6、部署博客"></a>6、部署博客</h4><p>打开命令行窗口，然后输入：<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>然后在_config.yml 文件中，找到 Deployment，然后按照如下格式修改：<br>deploy:<br>&ensp;type: git<br>&ensp;repo: git@github.com:yourname/yourname.github.io.git<br>&ensp;branch: master<br>再输入：<br><code>ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;</code><br>连续按3个回车后返回如下信息：<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。<br>输入以下代码测试：<br><code>ssh git@github.com</code><br>返回 successfully 信息即表示部署成功。<br>我们就可以使用以下命令发布文章了：<br><code>hexo d</code></p>
-<h4 id="7、其他"><a href="#7、其他" class="headerlink" title="7、其他"></a>7、其他</h4><p>Hexo 命令可以参考<a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a>。</p>
-<p><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="noopener">参考教程&gt;</a> </p>
-<p>推荐安装<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>。</p>
+<h4 id="1-Node-js"><a href="#1-Node-js" class="headerlink" title="1. Node.js"></a>1. Node.js</h4><p>下载链接：<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x86.msi" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x64.msi" target="_blank" rel="noopener">64bit</a><br>不确定版本的话直接下载32位即可，然后保持默认设置安装。<br>检查安装情况，win+r 打开运行，输入 cmd 回车，输入以下代码:<br><code>node -v</code><br><code>npm -v</code><br>如下图所示，则说明安装正确。<br><img src="/images/教程01.png" alt=""></p>
+<h4 id="2-Git"><a href="#2-Git" class="headerlink" title="2. Git"></a>2. Git</h4><p>下载链接：<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank" rel="noopener">64bit</a><br>其他设置只需要保持默认，但建议 PATH 选项按照下图选择：<br><img src="/images/教程02.png" alt=""><br>检查安装情况，输入以下代码:<br><code>git --version</code><br>如下图所示，则说明安装正确。<br><img src="/images/教程03.png" alt=""></p>
+<h4 id="3-Github"><a href="#3-Github" class="headerlink" title="3. Github"></a>3. Github</h4><p>打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册帐号，前往邮箱确认注册。<br>登录帐号，点击页面右上角的+，选择 New repository，注意在 Repository name 下必须填写为 yourname.github.io，其他可不填，然后点击 Create repository。<br><img src="/images/教程04.png" alt=""></p>
+<h4 id="4-GitHub-Pages"><a href="#4-GitHub-Pages" class="headerlink" title="4. GitHub Pages"></a>4. GitHub Pages</h4><p>可以去看这里的<a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a>，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
+<h4 id="5-Hexo"><a href="#5-Hexo" class="headerlink" title="5. Hexo"></a>5. Hexo</h4><p>任意盘符下新建文件夹，打开文件夹右键选择 Git Bash Here，如图：<br><img src="/images/教程05.png" alt=""><br>输入：<br><code>npm install hexo-cli -g</code><br>看到下图，继续输入：<br><img src="/images/教程06.png" alt=""><br><code>npm install hexo --save</code><br>结束后输入：<br><code>hexo -v</code><br>看到下图就说明安装成功。<br><img src="/images/教程07.png" alt=""><br>输入以下代码初始化：<br><code>hexo init</code><br>然后输入：<br><code>npm install</code><br>等待 npm 安装完所需组件即可。<br>安装完成后，再次输入：<br><code>hexo g</code><br>然后<br><code>hexo s</code><br>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就看见了你的博客首页。</p>
+<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6. 部署博客"></a>6. 部署博客</h4><p>打开命令行窗口，然后输入：<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>然后在_config.yml 文件中，找到 Deployment，然后按照如下格式修改：<font color="#FF0000"><br>deploy:<br>&emsp;type: git<br>&emsp;repo: git@github.com:yourname/yourname.github.io.git<br>&emsp;branch: master</font><br>再输入：<br><code>ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;</code><br>连续按3个回车后返回如下信息：<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。<br>输入以下代码测试：<br><code>ssh git@github.com</code><br>返回 successfully 信息即表示部署成功。<br>我们就可以使用以下命令发布文章了：<br><code>hexo d</code></p>
+<h4 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h4><p>Hexo 命令可以参考<a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a>。</p>
 
   </section>
 

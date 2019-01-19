@@ -82,7 +82,7 @@
   <!-- Weibo-->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="我的微博" target="_blank">
+    <a href="https://github.com/16cm" title="Weibo" target="_blank">
       <i class="social fa fa-weibo"></i>
       <span class="label">Weibo</span>
     </a>
@@ -92,7 +92,7 @@
   <!-- Github -->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="查看我的GitHub主页" target="_blank">
+    <a href="https://github.com/16cm" title="GitHub" target="_blank">
       <i class="social fa fa-github"></i>
       <span class="label">Github</span>
     </a>
@@ -118,7 +118,7 @@
 <!-- Twitter -->
 
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="上Twitter找我" target="_blank">
+    <a href="https://github.com/16cm" title="Twitter" target="_blank">
       <i class="social fa fa-twitter"></i>
       <span class="label">Twitter</span>
     </a>
@@ -170,7 +170,6 @@
     <p>单片机程序中为什么要禁止看门狗？</p>
 <a id="more"></a>
 <p>设置<font color="#FF0000">看门狗</font>定时器的时候，必须先关闭它才能设置，否则在开启状态下设置看门狗定时器可能会出现问题。一般单片机和DSP、还有ARM芯片里设置内部功能的时候，都是先关闭这个功能，再设置。中断也是类似的，我们通常它把中断全部关闭了，然后在程序里面进一步设置。</p>
-<hr>
 <p>要搞清楚关闭看门狗定时器的深层次原因，我们首先得明白其用途：</p>
 <p>它其实就是一个定时器，这个定时器溢出是会产生一个中断响应，这个中断响应对应的中断服务就是跳回程序开头，也就是复位。启动看门狗后，要定时在程序中把看门狗的计数器清0，以防止它进入中断然后复位，这就叫做<font color="#FF0000">喂狗</font>。</p>
 <p>看门狗定时器常用在程序很容易跑飞的情况下，比如等待超时，意外进入死循环等。在启动看门狗定时器的前提下，如果程序跑飞，不用怕，等计数器WTCNT溢出时，程序会自动复位。但在一般的程序中是不太可能会跑飞的，所以多数情况下我们关闭看门狗，是因为引入了看门狗之后就多了定时计数值处理的一些代码，这增加了程序的复杂性。</p>

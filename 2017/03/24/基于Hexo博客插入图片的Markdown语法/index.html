@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>基于Hexo博客插入图片的Markdown语法 | 16cm</title>
+    <title>基于Hexo插入图片的Markdown语法 | 16cm</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="基于Hexo博客插入图片的Markdown语法 | 16cm">
+    <meta name="twitter:title" content="基于Hexo插入图片的Markdown语法 | 16cm">
     <meta name="twitter:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="基于Hexo博客插入图片的Markdown语法 | 16cm">
+    <meta property="og:title" content="基于Hexo插入图片的Markdown语法 | 16cm">
     <meta property="og:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     
@@ -82,7 +82,7 @@
   <!-- Weibo-->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="我的微博" target="_blank">
+    <a href="https://github.com/16cm" title="Weibo" target="_blank">
       <i class="social fa fa-weibo"></i>
       <span class="label">Weibo</span>
     </a>
@@ -92,7 +92,7 @@
   <!-- Github -->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="查看我的GitHub主页" target="_blank">
+    <a href="https://github.com/16cm" title="GitHub" target="_blank">
       <i class="social fa fa-github"></i>
       <span class="label">Github</span>
     </a>
@@ -118,7 +118,7 @@
 <!-- Twitter -->
 
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="上Twitter找我" target="_blank">
+    <a href="https://github.com/16cm" title="Twitter" target="_blank">
       <i class="social fa fa-twitter"></i>
       <span class="label">Twitter</span>
     </a>
@@ -163,15 +163,15 @@
 
 </span>
     </div>
-    <h1 class="post-title">基于Hexo博客插入图片的Markdown语法</h1>
+    <h1 class="post-title">基于Hexo插入图片的Markdown语法</h1>
   </header>
 
   <section class="post">
     <p>虽然在官方语法中，Markdown插入图片的格式是这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](img.jpg)</span><br></pre></td></tr></table></figure>
-<p>然而用了Hexo框架，则需要在 <font color="#FF000"><strong><em>source</em></strong></font> 文件夹中新建一个 <font color="#FF0000"><strong><em>images</em></strong></font> 文件夹，然后把图片放在 <font color="#FF000"><strong><em>images</em></strong></font> 文件夹里。</p>
-<p>路径必须是这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](/images/img.jpg)</span><br></pre></td></tr></table></figure>
+<p><code>![Alt text](img.jpg)</code></p>
+<p>然而用了Hexo框架，则需要在 <font color="#FF000"><strong><em>source</em></strong></font> 文件夹中新建一个 <font color="#FF0000"><strong><em>images</em></strong></font> 文件夹，然后将图片放入其中。</p>
+<p>路径就变成这样：</p>
+<p><code>![Alt text](/images/img.jpg)</code></p>
 <p>不过有个缺点就是Markdown编辑器无法实时预览。</p>
 
   </section>

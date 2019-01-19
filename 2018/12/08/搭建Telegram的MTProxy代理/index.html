@@ -82,7 +82,7 @@
   <!-- Weibo-->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="我的微博" target="_blank">
+    <a href="https://github.com/16cm" title="Weibo" target="_blank">
       <i class="social fa fa-weibo"></i>
       <span class="label">Weibo</span>
     </a>
@@ -92,7 +92,7 @@
   <!-- Github -->
   
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="查看我的GitHub主页" target="_blank">
+    <a href="https://github.com/16cm" title="GitHub" target="_blank">
       <i class="social fa fa-github"></i>
       <span class="label">Github</span>
     </a>
@@ -118,7 +118,7 @@
 <!-- Twitter -->
 
   <li class="navigation__item">
-    <a href="https://github.com/16cm" title="上Twitter找我" target="_blank">
+    <a href="https://github.com/16cm" title="Twitter" target="_blank">
       <i class="social fa fa-twitter"></i>
       <span class="label">Twitter</span>
     </a>
@@ -167,15 +167,12 @@
   </header>
 
   <section class="post">
-    <p>官方MTProxy代理，使用起来比Sock5快速的多。<br><a id="more"></a></p>
-<ol>
-<li>安装依赖开发包openssl和zlib<br>1.1. 在CentOS上:<br><code>yum install openssl-devel zlib-devel</code><br><code>yum groupinstall &quot;Development Tools&quot;</code><br>1.2. 在Debian / Ubuntu上：<br><code>apt install git curl build-essential libssl-dev zlib1g-dev</code></li>
-<li>克隆MTProxy的源码<br><code>git clone https://github.com/TelegramMessenger/MTProxy</code><br><code>cd MTProxy</code></li>
-<li>编译安装，安装的位置在objs/bin/mtproto-proxy<br><code>make &amp;&amp; cd objs/bin</code></li>
-<li>运行程序<br>4.1 获取一个密钥，用于连接到电报服务器<br><code>curl -s https://core.telegram.org/getProxySecret -o proxy-secret</code><br>4.2 获取当前的Telegram的配置<br><code>curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</code><br>4.3 生成一个密钥供其他用户连接到您的代理使用<br><code>head -c 16 /dev/urandom | xxd -ps</code><br>4.4 运行mtproto-proxy服务器<br>服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，请用第二条启动命令。<br>无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code><br>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code><br>443为端口号，可以自定义， secret 替换为第三步生成的密钥。</li>
-<li>生成Telegram的代理快速链接<br><code>tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</code><br><code>SERVER_NAME</code>修改为你服务器的地址，<code>PORT</code>修改为你的端口号，<code>SECRET</code>修改为之前生成的密钥。</li>
-<li>服务器重启后如何重新启动代理服务<br>6.1 进入代理服务器启动目录<br><code>cd MTProxy/objs/bin</code><br>6.2 服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，请用第二条启动命令。<br>无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code><br>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code></li>
-</ol>
+    <h4 id="1-安装依赖开发包openssl和zlib"><a href="#1-安装依赖开发包openssl和zlib" class="headerlink" title="1. 安装依赖开发包openssl和zlib"></a>1. 安装依赖开发包openssl和zlib</h4><p>1.1. 在CentOS上:<br><code>yum install openssl-devel zlib-devel</code><br><code>yum groupinstall &quot;Development Tools&quot;</code><br>1.2. 在Debian / Ubuntu上：<br><code>apt install git curl build-essential libssl-dev zlib1g-dev</code></p>
+<h4 id="2-克隆MTProxy的源码"><a href="#2-克隆MTProxy的源码" class="headerlink" title="2. 克隆MTProxy的源码"></a>2. 克隆MTProxy的源码</h4><p><code>git clone https://github.com/TelegramMessenger/MTProxy</code><br><code>cd MTProxy</code></p>
+<h4 id="3-编译安装，安装的位置在objs-bin-mtproto-proxy"><a href="#3-编译安装，安装的位置在objs-bin-mtproto-proxy" class="headerlink" title="3. 编译安装，安装的位置在objs/bin/mtproto-proxy"></a>3. 编译安装，安装的位置在objs/bin/mtproto-proxy</h4><p><code>make &amp;&amp; cd objs/bin</code><br><a id="more"></a></p>
+<h4 id="4-运行程序"><a href="#4-运行程序" class="headerlink" title="4. 运行程序"></a>4. 运行程序</h4><p>4.1 获取一个密钥，用于连接到电报服务器<br><code>curl -s https://core.telegram.org/getProxySecret -o proxy-secret</code><br>4.2 获取当前的Telegram的配置<br><code>curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</code><br>4.3 生成一个密钥供其他用户连接到您的代理使用<br><code>head -c 16 /dev/urandom | xxd -ps</code><br>4.4 运行mtproto-proxy服务器<br>服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，请用第二条启动命令。<br>无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code><br>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code><br>443为端口号，可以自定义， secret 替换为第三步生成的密钥。</p>
+<h4 id="5-生成Telegram的代理快速链接"><a href="#5-生成Telegram的代理快速链接" class="headerlink" title="5. 生成Telegram的代理快速链接"></a>5. 生成Telegram的代理快速链接</h4><p><code>tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</code><br><code>SERVER_NAME</code>修改为你服务器的地址，<code>PORT</code>修改为你的端口号，<code>SECRET</code>修改为之前生成的密钥。</p>
+<h4 id="6-服务器重启后如何重新启动代理服务"><a href="#6-服务器重启后如何重新启动代理服务" class="headerlink" title="6. 服务器重启后如何重新启动代理服务"></a>6. 服务器重启后如何重新启动代理服务</h4><p>6.1 进入代理服务器启动目录<br><code>cd MTProxy/objs/bin</code><br>6.2 服务器有内网IP，如谷歌云、微软云、阿里云的需要设置NAT，请用第二条启动命令。<br>无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</code><br>有内网IP的启动命令，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。<br><code>./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</code></p>
 <p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
 
   </section>
