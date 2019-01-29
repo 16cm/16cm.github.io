@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hexo博客搭建教程 | 16cm</title>
+    <title>Hexo博客搭建教程 | iDo</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hexo博客搭建教程 | 16cm">
+    <meta name="twitter:title" content="Hexo博客搭建教程 | iDo">
     <meta name="twitter:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hexo博客搭建教程 | 16cm">
+    <meta property="og:title" content="Hexo博客搭建教程 | iDo">
     <meta property="og:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
     
@@ -34,7 +34,7 @@
     
     <meta name="generator" content="hexo"/>
     
-    <link rel="alternate" type="application/rss+xml" title="16cm" href="https://github.com/16cm">
+    <link rel="alternate" type="application/rss+xml" title="iDo" href="https://github.com/16cm">
     
 
     <link rel="canonical" href="http://yoursite.com/2017/01/08/Hexo博客搭建教程/"/>
@@ -57,8 +57,8 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
-        <a href="/" title="返回主页"><img src="/images/logo.png" width="80" alt="16cm logo" class="panel-cover__logo logo"></a>
-        <h1 class="panel-cover__title panel-title"><!-- <a href="/" title="前往 16cm 的主页"> -->16cm</h1>
+        <a href="/" title="返回主页"><img src="/images/logo.png" width="80" alt="iDo logo" class="panel-cover__logo logo"></a>
+        <h1 class="panel-cover__title panel-title"><!-- <a href="/" title="前往 iDo 的主页"> -->iDo</h1>
         
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">Contact me<br> cloudmusicservice@outlook.com</p>
@@ -174,7 +174,7 @@
 <h4 id="3-Github"><a href="#3-Github" class="headerlink" title="3. Github"></a>3. Github</h4><p>打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册帐号，前往邮箱确认注册。<br>登录帐号，点击页面右上角的+，选择 New repository，注意在 Repository name 下必须填写为 yourname.github.io，其他可不填，然后点击 Create repository。<br><img src="/images/教程04.png" alt=""></p>
 <h4 id="4-GitHub-Pages"><a href="#4-GitHub-Pages" class="headerlink" title="4. GitHub Pages"></a>4. GitHub Pages</h4><p>可以去看这里的<a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a>，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
 <h4 id="5-Hexo"><a href="#5-Hexo" class="headerlink" title="5. Hexo"></a>5. Hexo</h4><p>任意盘符下新建文件夹，打开文件夹右键选择 Git Bash Here，如图：<br><img src="/images/教程05.png" alt=""><br>输入：<br><code>npm install hexo-cli -g</code><br>看到下图，继续输入：<br><img src="/images/教程06.png" alt=""><br><code>npm install hexo --save</code><br>结束后输入：<br><code>hexo -v</code><br>看到下图就说明安装成功。<br><img src="/images/教程07.png" alt=""><br>输入以下代码初始化：<br><code>hexo init</code><br>然后输入：<br><code>npm install</code><br>等待 npm 安装完所需组件即可。<br>安装完成后，再次输入：<br><code>hexo g</code><br>然后<br><code>hexo s</code><br>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就看见了你的博客首页。</p>
-<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6. 部署博客"></a>6. 部署博客</h4><p>打开命令行窗口，然后输入：<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>然后在_config.yml 文件中，找到 Deployment，然后按照如下格式修改：<font color="#FF0000"><br>deploy:<br>&emsp;type: git<br>&emsp;repo: git@github.com:yourname/yourname.github.io.git<br>&emsp;branch: master</font><br>再输入：<br><code>ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;</code><br>连续按3个回车后返回如下信息：<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。<br>输入以下代码测试：<br><code>ssh git@github.com</code><br>返回 successfully 信息即表示部署成功。<br>我们就可以使用以下命令发布文章了：<br><code>hexo d</code></p>
+<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6. 部署博客"></a>6. 部署博客</h4><p>打开命令行窗口，然后输入：<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>然后在_config.yml 文件中，找到 Deployment，然后按照如下格式修改：<font color="#FF0000"><br>deploy:<br>&emsp;type: git<br>&emsp;repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>&emsp;branch: master</font><br>再输入：<br><code>ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;</code><br>连续按3个回车后返回如下信息：<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。<br>输入以下代码测试：<br><code>ssh git@github.com</code><br>返回 successfully 信息即表示部署成功。<br>我们就可以使用以下命令发布文章了：<br><code>hexo d</code></p>
 <h4 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h4><p>Hexo 命令可以参考<a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a>。</p>
 
   </section>

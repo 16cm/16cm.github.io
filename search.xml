@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[adb命令禁用安卓系统应用]]></title>
+      <url>%2F2019%2F01%2F29%2Fadb%E5%91%BD%E4%BB%A4%E7%A6%81%E7%94%A8%E5%AE%89%E5%8D%93%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[无bl解锁/无root，禁用系统自带的无用软件adb工具下载地址：Win Linux macOS 启用列表adb shell pm list packages -s -e &gt;enabled.txt在adb目录下多了一个enabled.txt文件 禁用列表adb shell pm list packages -s -d &gt;disabled.txt在adb目录下多了一个disabled.txt文件 禁用命令adb shell pm disable-user com.android.stk 批处理也可以使用批处理一次禁用多个软件，新建文本文档，添加以下内容adb shell pm disable-user com.android.stk1adb shell pm disable-user com.android.stk2adb shell pm disable-user com.android.stk3命令类似上面，将想禁用的软件添加进去，文件后缀改为bat，放到adb目录后双击运行。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Git常用命令]]></title>
       <url>%2F2019%2F01%2F18%2FGit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
       <content type="text"><![CDATA[初始化git init 添加git add 添加所有改动git add -A . or git add --all 删除git rm 查看状态git status 提交信息git commit -m &quot;something&quot; 提交日志git log 复制远程仓库git clone https://github.com/name/name.git 推送远程仓库git push origin master 推送并创建远程仓库git push -u origin master 关联远程仓库git remote add origin https://github.com/name/name.git]]></content>
