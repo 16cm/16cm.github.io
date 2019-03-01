@@ -1,173 +1,127 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<html lang="">
+  <head><meta name="generator" content="Hexo 3.8.0">
     
-    <title>adb命令禁用安卓系统应用 | 数字难民</title>
-    <meta name="renderer" content="webkit">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 
-    <meta name="description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="adb命令禁用安卓系统应用 | 数字难民">
-    <meta name="twitter:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="adb命令禁用安卓系统应用 | 数字难民">
-    <meta property="og:description" content="Contact me&lt;br&gt; cloudmusicservice@outlook.com">
 
-    
-    <meta name="author" content="难民">
-    
-    <link rel="stylesheet" href="/css/vno.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
-    
+  <meta name="description" content="adb命令禁用安卓系统应用">
 
-    
-    
-    <meta name="generator" content="hexo"/>
-    
-    <link rel="alternate" type="application/rss+xml" title="数字难民" href="https://github.com/16cm">
-    
 
-    <link rel="canonical" href="http://yoursite.com/2019/01/29/adb命令禁用安卓系统应用/"/>
 
-    
-    <link rel="author" href="https://github.com/16cm"/>
-    
-</head>
 
-<body class="home-template no-js">
+  <meta name="keywords" content="adb,">
 
-    <span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span>
 
-    
-<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
-  <div class="panel-main">
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
 
-        <a href="/" title="返回主页"><img src="/images/Bruno.png" width="80" alt="数字难民 logo" class="panel-cover__logo logo"></a>
-        <h1 class="panel-cover__title panel-title"><!-- <a href="/" title="前往 数字难民 的主页"> -->数字难民</h1>
+
+
+  <link rel="alternate" href="/atom.xml" title="数字难民">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=">
+
+
+
+<link rel="canonical" href="http://yoursite.com/2019/01/29/adb命令禁用安卓系统应用/">
+
+
+<meta name="description" content="无bl解锁/无root，禁用系统自带的无用软件adb工具下载地址：Win Linux macOS  启用列表adb shell pm list packages -s -e &amp;gt;enabled.txt在adb目录下多了一个enabled.txt文件 禁用列表adb shell pm list packages -s -d &amp;gt;disabled.txt在adb目录下多了一个disabled.">
+<meta name="keywords" content="adb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="adb命令禁用安卓系统应用">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/adb命令禁用安卓系统应用/index.html">
+<meta property="og:site_name" content="数字难民">
+<meta property="og:description" content="无bl解锁/无root，禁用系统自带的无用软件adb工具下载地址：Win Linux macOS  启用列表adb shell pm list packages -s -e &amp;gt;enabled.txt在adb目录下多了一个enabled.txt文件 禁用列表adb shell pm list packages -s -d &amp;gt;disabled.txt在adb目录下多了一个disabled.">
+<meta property="og:locale" content="zh-hans">
+<meta property="og:updated_time" content="2019-01-29T09:52:02.042Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="adb命令禁用安卓系统应用">
+<meta name="twitter:description" content="无bl解锁/无root，禁用系统自带的无用软件adb工具下载地址：Win Linux macOS  启用列表adb shell pm list packages -s -e &amp;gt;enabled.txt在adb目录下多了一个enabled.txt文件 禁用列表adb shell pm list packages -s -d &amp;gt;disabled.txt在adb目录下多了一个disabled.">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> adb命令禁用安卓系统应用 - 数字难民 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">数字难民</a>
+    </h1>
+
+    <nav id="nav-top">
         
-        <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Contact me<br> cloudmusicservice@outlook.com</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
-        
-        <div class="navigation-wrapper">
-          <div>
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="进入博客" class="blog-button">文章</a></li>
-            
-              <li class="navigation__item"><a href="/archives" title="文章列表">归档</a></li>
-            
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
             </ul>
-          </nav>
-          </div>
-          <div>
-          <nav class="cover-navigation navigation--social">
-  <ul class="navigation">
-
-  <!-- Weibo-->
-  
-  <li class="navigation__item">
-    <a href="https://github.com/16cm" title="Weibo" target="_blank">
-      <i class="social fa fa-weibo"></i>
-      <span class="label">Weibo</span>
-    </a>
-  </li>
-
-
-  <!-- Github -->
-  
-  <li class="navigation__item">
-    <a href="https://github.com/16cm" title="GitHub" target="_blank">
-      <i class="social fa fa-github"></i>
-      <span class="label">Github</span>
-    </a>
-  </li>
-
-
-<!-- Stack Overflow -->
         
+  </nav>
+</div>
 
-  <!-- Google Plus -->
-  
-  <li class="navigation__item">
-    <a href="https://github.com/16cm" title="Google+" target="_blank">
-      <i class="social fa fa-google-plus-square"></i>
-      <span class="label">Google+</span>
-    </a>
-  </li>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          adb命令禁用安卓系统应用
+        
+      </h1>
 
-
-<!-- Facebook -->
-
-
-<!-- Twitter -->
-
-  <li class="navigation__item">
-    <a href="https://github.com/16cm" title="Twitter" target="_blank">
-      <i class="social fa fa-twitter"></i>
-      <span class="label">Twitter</span>
-    </a>
-  </li>
-
-<!-- instagram -->
-
-
-  <li class="navigation__item">
-    <a href="https://github.com/16cm" title="RSS" target="_blank">
-      <i class="social fa fa-rss"></i>
-      <span class="label">RSS</span>
-    </a>
-  </li>
+      <time class="post-time">
+          Jan 29 2019
+      </time>
+    </header>
 
 
 
-  </ul>
-</nav>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cover--overlay cover-green"></div>
-  </div>
-</header>
-
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            <article class="post-container post-container--single">
-
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="2019-01-29T09:27:20.000Z" class="post-list__meta--date date">2019-01-29</time>
- &#8226; <span class="post-meta__tags tags">分类&nbsp;
-  <a class="tag-link" href="/tags/adb/">adb</a>
-
-</span>
-    </div>
-    <h1 class="post-title">adb命令禁用安卓系统应用</h1>
-  </header>
-
-  <section class="post">
-    <p>无bl解锁/无root，禁用系统自带的无用软件<br>adb工具下载地址：<a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener">Win</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="noopener">Linux</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="noopener">macOS</a></p>
+    
+            <div class="post-content">
+            <p>无bl解锁/无root，禁用系统自带的无用软件<br>adb工具下载地址：<a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener">Win</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="noopener">Linux</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="noopener">macOS</a></p>
 <ol>
 <li>启用列表<br>adb shell pm list packages -s -e &gt;enabled.txt<br>在adb目录下多了一个enabled.txt文件</li>
 <li>禁用列表<br>adb shell pm list packages -s -d &gt;disabled.txt<br>在adb目录下多了一个disabled.txt文件</li>
@@ -175,23 +129,126 @@
 <li>批处理<br>也可以使用批处理一次禁用多个软件，新建文本文档，添加以下内容<br>adb shell pm disable-user com.android.stk1<br>adb shell pm disable-user com.android.stk2<br>adb shell pm disable-user com.android.stk3<br>命令类似上面，将想禁用的软件添加进去，文件后缀改为bat，放到adb目录后双击运行。</li>
 </ol>
 
-  </section>
+            </div>
+          
 
-</article>
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/adb/">adb</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/02/06/谷歌相机/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">谷歌相机</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/01/18/Git常用命令/">
+        <span class="next-text nav-default">Git常用命令</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+    <div style="text-align:center;">
+        <button class="btn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+    </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
 
 
-            <footer class="footer">
-    <span class="footer__copyright">
-        &copy; 2019 - 基于 <a href="https://hexo.io" target="_blank" style="text-decoration:none">Hexo</a> 搭建的个人博客
-    </span>
-</footer>
+      </footer>
+    
+  </article>
 
-        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="/js/main.js"></script>
+      </div>
 
-     
-</body>
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2019
+    <span class="footer-author">16cm.</span>
+    <span class="power-by">
+        基于 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 搭建的个人博客
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+<script type="text/javascript">
+  var disqus_shortname = '19cm';
+  var disqus_identifier = '2019/01/29/adb命令禁用安卓系统应用/';
+
+  var disqus_title = "adb命令禁用安卓系统应用";
+
+
+  var disqus = {
+    load : function disqus(){
+        if(typeof DISQUS !== 'object') {
+          (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          $('#load-disqus').remove(); ///加载后移除按钮
+        }
+    }
+  }
+
+  
+    var disqus_config = function () {
+        this.page.url = disqus_url;
+        this.page.identifier = disqus_identifier;
+        this.page.title = disqus_title;
+    };
+  
+
+</script>
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v="></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+
+  </body>
 </html>
