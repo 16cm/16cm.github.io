@@ -40,7 +40,7 @@
     <entry>
       <title><![CDATA[Gay Pornographic Studio]]></title>
       <url>%2F2019%2F01%2F03%2FGayPornographicStudio%2F</url>
-      <content type="text"><![CDATA[NSFW Men at Play，西装控的天堂 Lucas Entertainment，场景多模特帅]]></content>
+      <content type="text"><![CDATA[Men at Play，西装控的天堂 Lucas Entertainment，场景多模特帅]]></content>
     </entry>
 
     
@@ -110,7 +110,7 @@
     <entry>
       <title><![CDATA[Chrome]]></title>
       <url>%2F2018%2F03%2F23%2FChrome%2F</url>
-      <content type="text"><![CDATA[充值信仰，谷歌大法好。 下载64-bitStable channel for WindowsBeta channel for WindowsDev channel for WindowsCanary build for Windows 32-bitStable channel for WindowsBeta channel for WindowsDev channel for WindowsCanary build for Windows 优化最新版本部分区域无法渲染的问题：图标-属性-目标&nbsp;–disable-directwrite-for-ui 默认以隐身模式启动：图标-属性-目标&nbsp;–incognito 注意以上代码前面都有一个半角空格。]]></content>
+      <content type="text"><![CDATA[下载64-bitStable channel for WindowsBeta channel for WindowsDev channel for WindowsCanary build for Windows 32-bitStable channel for WindowsBeta channel for WindowsDev channel for WindowsCanary build for Windows 优化最新版本部分区域无法渲染的问题：图标-属性-目标&nbsp;–disable-directwrite-for-ui 默认以隐身模式启动：图标-属性-目标&nbsp;–incognito 注意以上代码前面都有一个半角空格。]]></content>
     </entry>
 
     
@@ -124,7 +124,7 @@
     <entry>
       <title><![CDATA[去掉默认打开文件的关联程序]]></title>
       <url>%2F2017%2F11%2F28%2F%E5%8E%BB%E6%8E%89%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E8%81%94%E7%A8%8B%E5%BA%8F%2F</url>
-      <content type="text"><![CDATA[即恢复文件为无程序关联。 1、Win+R，键入 regedit 回车; 2、删除以下键值，建议修改前先备份一下，以 .dat 为例;123HKEY_CLASSES_ROOT\.datHKEY_CLASSES_ROOT\dat_auto_fileHKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dat 3、按 F5 刷新.]]></content>
+      <content type="text"><![CDATA[1、Win+R，键入 regedit 回车; 2、删除以下键值，建议修改前先备份一下，以 .dat 为例;123HKEY_CLASSES_ROOT\.datHKEY_CLASSES_ROOT\dat_auto_fileHKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dat 3、按 F5 刷新.]]></content>
     </entry>
 
     
@@ -166,7 +166,7 @@
     <entry>
       <title><![CDATA[单片机程序中为什么要禁止看门狗?]]></title>
       <url>%2F2017%2F03%2F16%2F%E5%8D%95%E7%89%87%E6%9C%BA%E7%A8%8B%E5%BA%8F%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%A6%81%E6%AD%A2%E7%9C%8B%E9%97%A8%E7%8B%97%2F</url>
-      <content type="text"><![CDATA[单片机程序中为什么要禁止看门狗？ 设置看门狗定时器的时候，必须先关闭它才能设置，否则在开启状态下设置看门狗定时器可能会出现问题。一般单片机和DSP、还有ARM芯片里设置内部功能的时候，都是先关闭这个功能，再设置。中断也是类似的，我们通常它把中断全部关闭了，然后在程序里面进一步设置。 要搞清楚关闭看门狗定时器的深层次原因，我们首先得明白其用途： 它其实就是一个定时器，这个定时器溢出是会产生一个中断响应，这个中断响应对应的中断服务就是跳回程序开头，也就是复位。启动看门狗后，要定时在程序中把看门狗的计数器清0，以防止它进入中断然后复位，这就叫做喂狗。 看门狗定时器常用在程序很容易跑飞的情况下，比如等待超时，意外进入死循环等。在启动看门狗定时器的前提下，如果程序跑飞，不用怕，等计数器WTCNT溢出时，程序会自动复位。但在一般的程序中是不太可能会跑飞的，所以多数情况下我们关闭看门狗，是因为引入了看门狗之后就多了定时计数值处理的一些代码，这增加了程序的复杂性。]]></content>
+      <content type="text"><![CDATA[设置看门狗定时器的时候，必须先关闭它才能设置，否则在开启状态下设置看门狗定时器可能会出现问题。一般单片机和DSP、还有ARM芯片里设置内部功能的时候，都是先关闭这个功能，再设置。中断也是类似的，我们通常它把中断全部关闭了，然后在程序里面进一步设置。 要搞清楚关闭看门狗定时器的深层次原因，我们首先得明白其用途： 它其实就是一个定时器，这个定时器溢出是会产生一个中断响应，这个中断响应对应的中断服务就是跳回程序开头，也就是复位。启动看门狗后，要定时在程序中把看门狗的计数器清0，以防止它进入中断然后复位，这就叫做喂狗。 看门狗定时器常用在程序很容易跑飞的情况下，比如等待超时，意外进入死循环等。在启动看门狗定时器的前提下，如果程序跑飞，不用怕，等计数器WTCNT溢出时，程序会自动复位。但在一般的程序中是不太可能会跑飞的，所以多数情况下我们关闭看门狗，是因为引入了看门狗之后就多了定时计数值处理的一些代码，这增加了程序的复杂性。]]></content>
     </entry>
 
     
