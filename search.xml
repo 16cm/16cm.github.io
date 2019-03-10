@@ -116,7 +116,7 @@
     
     <entry>
       <title><![CDATA[注册美区 Apple ID 账号指南]]></title>
-      <url>%2F2018%2F02%2F20%2F%E6%B3%A8%E5%86%8C%E7%BE%8E%E5%8C%BA%20Apple%20ID%20%E8%B4%A6%E5%8F%B7%E6%8C%87%E5%8D%97%2F</url>
+      <url>%2F2018%2F02%2F20%2F%E6%B3%A8%E5%86%8C%E7%BE%8E%E5%8C%BAAppleID%E8%B4%A6%E5%8F%B7%E6%8C%87%E5%8D%97%2F</url>
       <content type="text"><![CDATA[苹果官网称，从2018年2月28日起，中国区iCloud账户将转由“云上贵州大数据产业发展有限公司”运营。鉴于此，注册个 Apple ID 转战美区，以下方法不需绑定信用卡。 1、注册帐号首先挂美国的代理，打开苹果官网，点击右边的购物袋，选择 Sign in，点击右侧的 Don’t have an Apple ID? Create one now. ，然后依次填写信息，年龄填写20+，以免日后在 App Store 里面有些应用无法购买。图中的地方为 Apple ID，最好是谷歌或微软邮箱，并且是未绑定过 Apple ID 的邮箱。填写完点击最下方的 Continue，将邮箱收到的验证码填写，确认后即注册成功。 2、设备登录帐号iPhone上登录帐号之前挂上代理并且开启全局代理，然后在 App Store 里面注销原有账号后登录刚才注册的 Apple ID，这时会要求填写账单信息：1.付款信息里面选择 None；2.名字随便填写；3.可以使用以下地址：Infinite LoopCupertino, CA 95014(408) 996–1010填写完点击 Done 确认，这时可以去搜索任意一个软件下载试试。 3、购买应用美区无法使用支付宝或微信支付，所以我们选择在苹果官网购买礼品卡的方法。苹果有一个通过邮件方式购买 App Store iTunes Gift Cards 的服务，用户可以在苹果官网购买 Gift Cards，通过邮件接收，无需实体卡邮寄，这样就可以实现美国区 App Store 的充值，而不必再绑定支付方式。 2018.03.15目前的状态是 iCloud 使用美区 Apple ID，App Store 使用国区 Apple ID，继续使用支付宝或微信作为支付手段，其次 Apple Music 就是国区，订阅费每个月10人民币或年费100人民币，可以开启 iCloud 资料库。]]></content>
     </entry>
 
@@ -151,7 +151,7 @@
     
     <entry>
       <title><![CDATA[键盘扫描:支持短按、长按、双击]]></title>
-      <url>%2F2017%2F03%2F21%2F%E9%94%AE%E7%9B%98%E6%89%AB%E6%8F%8F-%E6%94%AF%E6%8C%81%E7%9F%AD%E6%8C%89%E3%80%81%E9%95%BF%E6%8C%89%E3%80%81%E5%8F%8C%E5%87%BB%2F</url>
+      <url>%2F2017%2F03%2F21%2F%E9%94%AE%E7%9B%98%E6%89%AB%E6%8F%8F-%E6%94%AF%E6%8C%81%E7%9F%AD%E6%8C%89%E9%95%BF%E6%8C%89%E5%8F%8C%E5%87%BB%2F</url>
       <content type="text"><![CDATA[基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980//按键端口初始化void Key_Init(void)&#123; GPIO_InitTypeDef GPIO_InitStructure; //开启按键端口（PA）的时钟 RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE); GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8; GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; //上拉输入 GPIO_Init(GPIOB, &amp;GPIO_InitStructure);&#125;//扫描按键int Key_Scan(void)&#123; int Down_Value=0; /*检测是否有按键按下*/ if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 ) &#123; delay_ms(20); if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 ) &#123; if(k1_shortpress_happen==0) &#123; k1_shortpress_happen = 1; key1_shortpress_Flag = 1; key1_timing=0; &#125; if(k1_shortpress_happen==1) &#123; if(key1_timing &gt; 3000) &#123; Down_Value = 2; //长按生效标志位 k1_shortpress_happen = 0; k1_LongPress_Flag=1; &#125; &#125; &#125; &#125; if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8)==1) &#123; key1_shortpress_Flag = 0; if(k1_shortpress_happen==1) &#123; k1_shortpress_happen = 0; if(k1_doublepress_happen==0) &#123; k1_doublepress_happen = 1; key1_doublepress_Flag=1; key1_doublepress_timing = 0; &#125; else &#123; if(key1_doublepress_timing &lt; 300) &#123; k1_doublepress_happen = 0; Down_Value = 0; //短按生效标志位 &#125; &#125; &#125; else if(k1_doublepress_happen == 1) &#123; if(key1_doublepress_timing &gt; 300) &#123; if(k1_LongPress_Flag==1) &#123; k1_LongPress_Flag=0; &#125; else &#123; Down_Value = 1; //双击生效标志位 &#125; k1_doublepress_happen = 0; key1_doublepress_Flag = 0; &#125; &#125; else if(k1_longpress_happen==1) &#123; k1_longpress_happen = 0; &#125; &#125;&#125;]]></content>
     </entry>
 
