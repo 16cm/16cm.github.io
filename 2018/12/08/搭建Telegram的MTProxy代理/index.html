@@ -35,18 +35,18 @@
 <link rel="canonical" href="http://yoursite.com/2018/12/08/搭建Telegram的MTProxy代理/">
 
 
-<meta name="description" content="安装依赖开发包openssl和zlib在CentOS上:12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential libssl-dev zlib1g-dev 克隆MTProxy">
+<meta name="description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
 <meta name="keywords" content="Telegram,MTProxy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建Telegram的MTProxy代理">
 <meta property="og:url" content="http://yoursite.com/2018/12/08/搭建Telegram的MTProxy代理/index.html">
 <meta property="og:site_name" content="数字难民">
-<meta property="og:description" content="安装依赖开发包openssl和zlib在CentOS上:12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential libssl-dev zlib1g-dev 克隆MTProxy">
+<meta property="og:description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2019-03-01T06:54:06.253Z">
+<meta property="og:updated_time" content="2019-03-27T11:33:08.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Telegram的MTProxy代理">
-<meta name="twitter:description" content="安装依赖开发包openssl和zlib在CentOS上:12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential libssl-dev zlib1g-dev 克隆MTProxy">
+<meta name="twitter:description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=">
@@ -121,7 +121,10 @@
 
     
             <div class="post-content">
-            <p>安装依赖开发包openssl和zlib<br>在CentOS上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure></p>
+            <h4 id="20190327"><a href="#20190327" class="headerlink" title="20190327"></a>20190327</h4><p>鉴于最近MTP代理频繁被封，不建议搭建。</p>
+<hr>
+<p>安装依赖开发包openssl和zlib<br>在CentOS上:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure>
 <p>在Debian / Ubuntu上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure></p>
 <p>克隆MTProxy的源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure></p>
 <p>编译安装，安装的位置在objs/bin/mtproto-proxy<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure></p>
@@ -132,7 +135,8 @@
 <p>服务器有有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure></p>
 <p>443为端口号，可以自定义， secret 替换为第三步生成的密钥。<br>生成Telegram的代理快速链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure></p>
 <p><code>SERVER_NAME</code>修改为你服务器的地址，<code>PORT</code>修改为你的端口号，<code>SECRET</code>修改为之前生成的密钥。</p>
-<p>服务器重启后如何重新启动代理服务?<br>进入代理服务器启动目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure></p>
+<h4 id="服务器重启后如何重新启动代理服务"><a href="#服务器重启后如何重新启动代理服务" class="headerlink" title="服务器重启后如何重新启动代理服务?"></a>服务器重启后如何重新启动代理服务?</h4><p>进入代理服务器启动目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure>
 <p>服务器无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure></p>
 <p>服务器有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure></p>
 <p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
