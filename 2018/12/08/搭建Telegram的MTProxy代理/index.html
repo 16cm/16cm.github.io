@@ -1,268 +1,201 @@
 <!DOCTYPE html>
-<html lang="">
-  <head><meta name="generator" content="Hexo 3.8.0">
-    
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>数字难民</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
 
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link" >
+                首页
+            </a>
+            
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
 
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
 
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">16cm's Blog</a>
+        </div>
 
-  <meta name="description" content="搭建Telegram的MTProxy代理">
-
-
-
-
-  <meta name="keywords" content="Telegram,MTProxy,">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="数字难民">
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=">
-
-
-
-<link rel="canonical" href="http://yoursite.com/2018/12/08/搭建Telegram的MTProxy代理/">
-
-
-<meta name="description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
-<meta name="keywords" content="Telegram,MTProxy">
-<meta property="og:type" content="article">
-<meta property="og:title" content="搭建Telegram的MTProxy代理">
-<meta property="og:url" content="http://yoursite.com/2018/12/08/搭建Telegram的MTProxy代理/index.html">
-<meta property="og:site_name" content="数字难民">
-<meta property="og:description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
-<meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2019-03-27T11:33:08.798Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建Telegram的MTProxy代理">
-<meta name="twitter:description" content="20190327鉴于最近MTP代理频繁被封，不建议搭建。  安装依赖开发包openssl和zlib在CentOS上: 12yum install openssl-devel zlib-develyum groupinstall &amp;quot;Development Tools&amp;quot; 在Debian / Ubuntu上：1apt install git curl build-essential">
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-
-
-
-
-<script type="text/javascript">
-  var themeConfig = {
-    fancybox: {
-      enable: false
-    },
-  };
-</script>
-
-
-
-
-  
-
-
-
-    <title> 搭建Telegram的MTProxy代理 - 数字难民 </title>
-  </head>
-
-  <body>
-    <div id="page">
-      <header id="masthead"><div class="site-header-inner">
-    <h1 class="site-title">
-        <a href="/." class="logo">数字难民</a>
-    </h1>
-
-    <nav id="nav-top">
-        
-            <ul id="menu-top" class="nav-top-items">
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">搭建Telegram的MTProxy代理</h2>
+            <div class="post-meta">
+                <span class="post-time">2018-12-08</span>
                 
-                    <li class="menu-item">
-                        <a href="/archives">
-                            
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        
-  </nav>
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#20190327"><span class="toc-text">20190327</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器重启后如何重新启动代理服务"><span class="toc-text">服务器重启后如何重新启动代理服务?</span></a></li></ol>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
 </div>
-
-      </header>
-      <div id="content">
-        
-    <div id="primary">
-        
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          搭建Telegram的MTProxy代理
-        
-      </h1>
-
-      <time class="post-time">
-          Dec 08 2018
-      </time>
-    </header>
-
-
-
-    
-            <div class="post-content">
+        <div class="post-content">
             <h4 id="20190327"><a href="#20190327" class="headerlink" title="20190327"></a>20190327</h4><p>鉴于最近MTP代理频繁被封，不建议搭建。</p>
 <hr>
 <p>安装依赖开发包openssl和zlib<br>在CentOS上:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel zlib-devel</span><br><span class="line">yum groupinstall &quot;Development Tools&quot;</span><br></pre></td></tr></table></figure>
-<p>在Debian / Ubuntu上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure></p>
-<p>克隆MTProxy的源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure></p>
-<p>编译安装，安装的位置在objs/bin/mtproto-proxy<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure></p>
-<p>获取一个密钥，用于连接到电报服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxySecret -o proxy-secret</span><br></pre></td></tr></table></figure></p>
-<p>获取当前的Telegram的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</span><br></pre></td></tr></table></figure></p>
-<p>生成一个密钥供其他用户连接到您的代理使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -c 16 /dev/urandom | xxd -ps</span><br></pre></td></tr></table></figure></p>
-<p>服务器有无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure></p>
-<p>服务器有有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure></p>
-<p>443为端口号，可以自定义， secret 替换为第三步生成的密钥。<br>生成Telegram的代理快速链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure></p>
+
+<p>在Debian / Ubuntu上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git curl build-essential libssl-dev zlib1g-dev</span><br></pre></td></tr></table></figure>
+
+<p>克隆MTProxy的源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TelegramMessenger/MTProxy</span><br><span class="line">cd MTProxy</span><br></pre></td></tr></table></figure>
+
+<p>编译安装，安装的位置在objs/bin/mtproto-proxy</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; cd objs/bin</span><br></pre></td></tr></table></figure>
+
+<p>获取一个密钥，用于连接到电报服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxySecret -o proxy-secret</span><br></pre></td></tr></table></figure>
+
+<p>获取当前的Telegram的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf</span><br></pre></td></tr></table></figure>
+
+<p>生成一个密钥供其他用户连接到您的代理使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -c 16 /dev/urandom | xxd -ps</span><br></pre></td></tr></table></figure>
+
+<p>服务器有无内网IP的启动命令，secret 这里替换为之前生成的密钥。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
+
+<p>服务器有有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP 替换为你服务器的内网IP和公网IP。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure>
+
+<p>443为端口号，可以自定义， secret 替换为第三步生成的密钥。<br>生成Telegram的代理快速链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tg://proxy?server=SERVER_NAME&amp;port=PORT&amp;secret=SECRET</span><br></pre></td></tr></table></figure>
+
 <p><code>SERVER_NAME</code>修改为你服务器的地址，<code>PORT</code>修改为你的端口号，<code>SECRET</code>修改为之前生成的密钥。</p>
 <h4 id="服务器重启后如何重新启动代理服务"><a href="#服务器重启后如何重新启动代理服务" class="headerlink" title="服务器重启后如何重新启动代理服务?"></a>服务器重启后如何重新启动代理服务?</h4><p>进入代理服务器启动目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd MTProxy/objs/bin</span><br></pre></td></tr></table></figure>
-<p>服务器无内网IP的启动命令，secret 这里替换为之前生成的密钥。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure></p>
-<p>服务器有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure></p>
+
+<p>服务器无内网IP的启动命令，secret 这里替换为之前生成的密钥。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1</span><br></pre></td></tr></table></figure>
+
+<p>服务器有内网IP的启动命令，如谷歌云、微软云、阿里云的需要设置NAT，secret 这里替换为之前生成的密钥，内网IP:公网IP替换为你服务器的内网IP和公网IP。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mtproto-proxy -u nobody -p 8888 -H 443 -S secret --aes-pwd proxy-secret proxy-multi.conf -M 1 --nat-info 内网IP:公网IP</span><br></pre></td></tr></table></figure>
+
 <p>原文链接：<a href="https://www.vediotalk.com/?p=1808" target="_blank" rel="noopener">https://www.vediotalk.com/?p=1808</a></p>
 
-            </div>
-          
-
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/Telegram/" title="Telegram">Telegram</a>
+            
+            <a class="tag" href="/tags/MTProxy/" title="MTProxy">MTProxy</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
     
-      <footer class="post-footer">
-		
-		<div class="post-tags">
-		  
-			<a href="/tags/Telegram/">Telegram</a>
-		  
-			<a href="/tags/MTProxy/">MTProxy</a>
-		  
-		</div>
-		
-
+        
+            <a class="prev" href="/2018/12/22/火炬之光2官方翻译错误集锦/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">火炬之光2官方翻译错误集锦</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
         
         
-  <nav class="post-nav">
-    
-      <a class="prev" href="/2018/12/22/火炬之光2官方翻译错误集锦/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">火炬之光2官方翻译错误集锦</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
-    
-    
-      <a class="next" href="/2018/12/06/系统折腾目录/">
-        <span class="next-text nav-default">系统折腾目录</span>
-        <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    
-  </nav>
-
+            <a class="next" href="/2018/12/06/系统折腾目录/">
+                <span class="nav-default">系统折腾目录</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
         
-  <div class="comments" id="comments">
     
-    <div style="text-align:center;">
-        <button class="btn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+</div>
+<div id="comment-container"></div>
     </div>
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+</div>
+<footer class="footer-social">
     
-  </div>
 
-
-      </footer>
     
-  </article>
 
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">16cm</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
     </div>
-
-      </div>
-
-      <footer id="colophon"><span class="copyright-year">
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
     
-        &copy;
-    
-    2019
-    <span class="footer-author">16cm.</span>
-    <span class="power-by">
-        基于 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 搭建的个人博客
-    </span>
-</span>
-
-      </footer>
-
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
-    </div>
-    
-
-<script type="text/javascript">
-  var disqus_shortname = '19cm';
-  var disqus_identifier = '2018/12/08/搭建Telegram的MTProxy代理/';
-
-  var disqus_title = "搭建Telegram的MTProxy代理";
-
-
-  var disqus = {
-    load : function disqus(){
-        if(typeof DISQUS !== 'object') {
-          (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-          }());
-          $('#load-disqus').remove(); ///加载后移除按钮
-        }
-    }
-  }
-
-  
-    var disqus_config = function () {
-        this.page.url = disqus_url;
-        this.page.identifier = disqus_identifier;
-        this.page.title = disqus_title;
-    };
-  
 
 </script>
-
-
-    
-
-
-
-
-  
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
-  
-
-  
-
-    <script type="text/javascript" src="/js/src/theme.js?v="></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
-
-  </body>
 </html>
