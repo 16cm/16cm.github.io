@@ -79,9 +79,9 @@
         <div class="posts">
     <article class="post-whole">
         <div class="post-title">
-            <h2 class="title">Debian/Ubuntu下shadowsocks-libev一键安装脚本</h2>
+            <h2 class="title">Debian/Ubuntu 开启 Google BBR</h2>
             <div class="post-meta">
-                <span class="post-time">2019-09-28</span>
+                <span class="post-time">2019-10-27</span>
                 
                 <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
             </div>
@@ -94,25 +94,19 @@
     </div>
 </div>
         <div class="post-content">
-            <p>仅作备份</p>
+            <p>提示：Ubuntu 19.04默认开启bbr，所以不需要以下操作。</p>
 <a id="more"></a>
 
-<p>本脚本适用环境：<br>系统支持：<br>Debian/Ubuntu</p>
-<p>内存要求：<br>≥128M</p>
-<p>更新日期：<br>2019 年 01 月 12 日</p>
-<p>脚本特性：<br>该版本的特点是内存占用小（600k左右），使用 libev 和 C 编写，低 CPU 消耗，甚至可以安装在基于 OpenWRT 的路由器上。</p>
-<p>使用方法：<br>使用root用户登录，运行以下命令并按脚本提示完成安装：</p>
-<p>wget –no-check-certificate -O shadowsocks-libev-debian.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh</a><br>chmod +x shadowsocks-libev-debian.sh<br>./shadowsocks-libev-debian.sh 2&gt;&amp;1 | tee shadowsocks-libev-debian.log</p>
-<p>安装完成后，脚本提示如下：<br>Congratulations, Shadowsocks-libev server install completed!<br>Your Server IP :your_server_ip<br>Your Server Port :your_server_port<br>Your Password :your_password<br>Your Encryption Method:your_encryption_method<br>Welcome to visit:<a href="https://teddysun.com/358.html" target="_blank" rel="noopener">https://teddysun.com/358.html</a><br>Enjoy it!</p>
-<p>卸载方法：<br>使用 root 用户登录，运行以下命令：<br>./shadowsocks-libev-debian.sh uninstall</p>
-<p>使用命令：<br>启动：/etc/init.d/shadowsocks start<br>停止：/etc/init.d/shadowsocks stop<br>重启：/etc/init.d/shadowsocks restart<br>查看状态：/etc/init.d/shadowsocks status</p>
-<p><a href="https://github.com/teddysun/shadowsocks_install/tree/master" target="_blank" rel="noopener">脚本地址</a></p>
+<p>1、修改系统变量<br> echo “net.core.default_qdisc=fq” &gt;&gt; /etc/sysctl.conf<br> echo “net.ipv4.tcp_congestion_control=bbr” &gt;&gt; /etc/sysctl.conf</p>
+<p>2、保存生效<br> sysctl -p</p>
+<p>3、查看内核是否已开启BBR<br> sysctl net.ipv4.tcp_available_congestion_control<br> 显示以下即已开启：<br> net.ipv4.tcp_available_congestion_control = bbr cubic reno</p>
+<p>4、查看BBR是否启动<br> lsmod | grep bbr<br> 显示以下即启动成功：<br> tcp_bbr 20480 14</p>
 
         </div>
         
         <div class="post-tag">
             
-            <a class="tag" href="/tags/shadowsocks/" title="shadowsocks">shadowsocks</a>
+            <a class="tag" href="/tags/bbr/" title="bbr">bbr</a>
             
         </div>
         
@@ -121,15 +115,9 @@
 <div class="paginator">
     
         
-            <a class="prev" href="/2019/10/27/Debian&Ubuntu开启bbr/">
-                <i class="iconfont icon-prev"></i>
-                <span class="nav-default">Debian/Ubuntu 开启 Google BBR</span>
-                <span class="nav-mobile">上一篇</span>
-            </a>
         
-        
-            <a class="next" href="/2019/05/03/崂山一日游/">
-                <span class="nav-default">崂山一日游</span>
+            <a class="next" href="/2019/09/28/Debian&Ubuntu下shadowsocks-libev一键安装脚本/">
+                <span class="nav-default">Debian/Ubuntu下shadowsocks-libev一键安装脚本</span>
                 <span class="nav-mobile">下一篇</span>
                 <i class="iconfont icon-next"></i>
             </a>
