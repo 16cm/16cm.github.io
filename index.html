@@ -80,6 +80,33 @@
     
         <article class="post-abstract">
             <div class="post-title">
+                <h2><a class="post-title-link" href="/2019/11/17/VPS性能测试脚本/">VPS性能测试脚本</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2019-11-17</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <a id="more"></a>
+
+<h2 id="bensh-sh"><a href="#bensh-sh" class="headerlink" title="bensh.sh"></a><strong>bensh.sh</strong></h2><p>1、显示当前测试的各种系统信息；<br>2、取自世界多处的知名数据中心的测试点，下载测试比较全面；<br>3、支持 IPv6 下载测速；<br>4、IO 测试三次，并显示平均值。</p>
+<p>使用方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/11/17/YhMqPn1BHWpUOmg.png" alt></p>
+<h2 id="SuperBench-sh"><a href="#SuperBench-sh" class="headerlink" title="SuperBench.sh"></a><strong>SuperBench.sh</strong></h2><p>SuperBench.sh是在bench.sh的基础上发展而来的，也可以测试VPS系统基本信息和IO性能，不过将测速节点换成了国内节点。</p>
+<p>使用方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- git.io/superbench.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/11/17/BRoG2yT8fPSMHsN.png" alt></p>
+
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
                 <h2><a class="post-title-link" href="/2019/10/27/Debian&Ubuntu开启bbr/">Debian/Ubuntu 开启 Google BBR</a></h2>
             </div>
             <div class="post-meta">
@@ -265,34 +292,6 @@
                             <i class="iconfont icon-readmore"></i>
                         </a>
                     </div>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2019/01/18/Git常用命令/">Git常用命令</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2019-01-18</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <ol>
-<li>初始化<br><code>git init</code></li>
-<li>添加<br><code>git add</code></li>
-<li>添加所有改动<br><code>git add -A .</code> or <code>git add --all</code></li>
-<li>删除<br><code>git rm</code></li>
-<li>查看状态<br><code>git status</code></li>
-<li>提交信息<br><code>git commit -m &quot;something&quot;</code></li>
-<li>提交日志<br><code>git log</code></li>
-<li>复制远程仓库<br><code>git clone https://github.com/name/name.git</code></li>
-<li>推送远程仓库<br><code>git push origin master</code></li>
-<li>推送并创建远程仓库<br><code>git push -u origin master</code></li>
-<li>关联远程仓库<br><code>git remote add origin https://github.com/name/name.git</code></li>
-</ol>
-
                 
             </div>
         </article>

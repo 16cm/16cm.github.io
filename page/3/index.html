@@ -80,6 +80,27 @@
     
         <article class="post-abstract">
             <div class="post-title">
+                <h2><a class="post-title-link" href="/2018/08/12/安卓版Chrome移除首页新闻推荐/">安卓版Chrome移除首页新闻推荐</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2018-08-12</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <p>在地址栏输入下列网址，然后更改为「 Disabled 」：</p>
+<ol>
+<li>移除<font color="#FF0000">推荐的新闻</font><br><code>chrome://flags/#enable-ntp-remote-suggestions</code></li>
+<li>移除<font color="#FF0000">最近下载过的档案</font><br><code>chrome://flags/#enable-ntp-asset-download-suggestions</code></li>
+<li>移除<font color="#FF0000">最近使用书签</font><br><code>chrome://flags/#enable-ntp-bookmark-suggestions</code></li>
+</ol>
+
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
                 <h2><a class="post-title-link" href="/2018/06/19/禁止PotPlayer联网自动更新/">禁止PotPlayer联网自动更新</a></h2>
             </div>
             <div class="post-meta">
@@ -243,26 +264,6 @@
                 
                     <p>基于STM32库函数编写的键盘扫描程序，根据键值触发相应的事件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">//按键端口初始化</span><br><span class="line">void Key_Init(void)&#123;</span><br><span class="line">	GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">	//开启按键端口（PA）的时钟</span><br><span class="line">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);</span><br><span class="line">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;  </span><br><span class="line">	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;  //上拉输入</span><br><span class="line">	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line">&#125;</span><br><span class="line">//扫描按键</span><br><span class="line">int Key_Scan(void)</span><br><span class="line">&#123;	</span><br><span class="line">	int Down_Value=0;</span><br><span class="line">	/*检测是否有按键按下*/</span><br><span class="line">	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 )</span><br><span class="line">	&#123;		</span><br><span class="line">		delay_ms(20);</span><br><span class="line">		if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) == 0 )</span><br><span class="line">		&#123;</span><br><span class="line">			if(k1_shortpress_happen==0)</span><br><span class="line">			&#123;  </span><br><span class="line">				k1_shortpress_happen = 1;</span><br><span class="line">				key1_shortpress_Flag = 1;</span><br><span class="line">				key1_timing=0;			</span><br><span class="line">			&#125;</span><br><span class="line">				</span><br><span class="line">			if(k1_shortpress_happen==1)  </span><br><span class="line">			&#123;  </span><br><span class="line">				if(key1_timing &gt; 3000) </span><br><span class="line">				&#123;  </span><br><span class="line">					Down_Value = 2;        //长按生效标志位</span><br><span class="line">					k1_shortpress_happen = 0;</span><br><span class="line">					k1_LongPress_Flag=1;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;  </span><br><span class="line">		&#125; </span><br><span class="line">	&#125;		</span><br><span class="line">	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8)==1) </span><br><span class="line">	&#123;  </span><br><span class="line">		key1_shortpress_Flag = 0;</span><br><span class="line">		if(k1_shortpress_happen==1)</span><br><span class="line">		&#123;  </span><br><span class="line">			k1_shortpress_happen = 0;   </span><br><span class="line">			if(k1_doublepress_happen==0) </span><br><span class="line">			&#123;  </span><br><span class="line">				k1_doublepress_happen = 1;</span><br><span class="line">				key1_doublepress_Flag=1;</span><br><span class="line">				key1_doublepress_timing = 0;</span><br><span class="line">			&#125;  </span><br><span class="line">			else  </span><br><span class="line">			&#123;</span><br><span class="line">				if(key1_doublepress_timing &lt; 300) </span><br><span class="line">				&#123;  </span><br><span class="line">					k1_doublepress_happen = 0;  </span><br><span class="line">					Down_Value = 0;        //短按生效标志位</span><br><span class="line">				&#125;  </span><br><span class="line">			&#125; </span><br><span class="line">		&#125;</span><br><span class="line">		else if(k1_doublepress_happen == 1)</span><br><span class="line">		&#123;  </span><br><span class="line">			if(key1_doublepress_timing &gt; 300)  </span><br><span class="line">			&#123;  </span><br><span class="line">				if(k1_LongPress_Flag==1)</span><br><span class="line">				&#123;</span><br><span class="line">					k1_LongPress_Flag=0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					Down_Value = 1;        //双击生效标志位</span><br><span class="line">				&#125;</span><br><span class="line">				k1_doublepress_happen = 0;</span><br><span class="line">				key1_doublepress_Flag = 0;</span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;</span><br><span class="line">		else if(k1_longpress_happen==1)  </span><br><span class="line">		&#123;</span><br><span class="line">			k1_longpress_happen = 0;</span><br><span class="line">		&#125;			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/03/20/波数分辨率与波长分辨率的转换/">波数分辨率与波长分辨率的转换</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-03-20</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>在红外光谱的研究中，经常用波数 <strong><em>v</em></strong> 来表示不同频率的红外线。</p>
-<p>波数的定义为单位距离中波的数目，其量纲为 <strong><em>cm<sup>-1</sup></em></strong>。</p>
-<p>波数和波长的关系为 <strong><em>v ＝ 1/λ</em></strong>，例如波长为 <strong><em>1</em></strong> 毫米的远红外线的波数为 <strong><em>v ＝ 1/λ= 1/(0.1 cm<sup>-1</sup>) = 10 cm<sup>-1</sup></em></strong>。</p>
-<p>波数精度即波长重复性，指对同一样品进行多次扫描，光谱谱峰位置间的差异程度或重复性，通常用多次测量某一谱峰所得标准差来表示。</p>
-<p>有一个简单算法，可以大概估算出分辨率：<br>如果波数分辨率为 <strong><em>X (cm<sup>-1</sup>)</em></strong>，那么波长 <strong><em>λ (nm)</em></strong> 对应的波数为 <strong><em>N = 10<sup>-2</sup>/λ =  10,000,000/(λ×10<sup>9</sup>) (cm<sup>-1</sup>)</em></strong>，对应的波长分辨率为：<strong><em>λ = 10,000,000×X / N<sup>2</sup> (nm)</em></strong>。</p>
-
                 
             </div>
         </article>
