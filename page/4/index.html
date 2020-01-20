@@ -1,275 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>数字难民</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        数字难民
+    </title>
+    <link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/gitment.css">
-    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
 </head>
-<body>
-<header class="header">
-    <div class="header-inner">
-        <div class="header-title">
 
-        </div>
-        <nav class="header-nav">
-            
-            <a href="/" class="header-nav-link" >
-                首页
-            </a>
-            
-
-            
-            <a href="/archives" class="header-nav-link">
-                归档
-            </a>
-            
-
-            
-            <a href="/tags" class="header-nav-link">
-                标签
-            </a>
-            
-
-            
-            <a href="/about/" class="header-nav-link">
-                关于
-            </a>
-            
-        </nav>
-    </div>
-</header>
-<header class="mobile-header">
-    <div class="mobile-nav">
-        <div class="mobile-nav-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="mobile-nav-title">
-            <a href="/" class="mobile-nav-title-link">16cm's Blog</a>
-        </div>
-
-    </div>
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-home"></i>
-                <a href="/" class="mobile-nav-link">首页</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-archive"></i>
-                <a href="/archives" class="mobile-nav-link">归档</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-tag"></i>
-                <a href="/tags" class="mobile-nav-link">标签</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-about"></i>
-                <a href="/about/" class="mobile-nav-link">关于</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<div class="main">
-    <div class="content-inner">
-        <div class="posts">
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/03/20/波数分辨率与波长分辨率的转换/">波数分辨率与波长分辨率的转换</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-03-20</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>在红外光谱的研究中，经常用波数 <strong><em>v</em></strong> 来表示不同频率的红外线。</p>
-<p>波数的定义为单位距离中波的数目，其量纲为 <strong><em>cm<sup>-1</sup></em></strong>。</p>
-<p>波数和波长的关系为 <strong><em>v ＝ 1/λ</em></strong>，例如波长为 <strong><em>1</em></strong> 毫米的远红外线的波数为 <strong><em>v ＝ 1/λ= 1/(0.1 cm<sup>-1</sup>) = 10 cm<sup>-1</sup></em></strong>。</p>
-<p>波数精度即波长重复性，指对同一样品进行多次扫描，光谱谱峰位置间的差异程度或重复性，通常用多次测量某一谱峰所得标准差来表示。</p>
-<p>有一个简单算法，可以大概估算出分辨率：<br>如果波数分辨率为 <strong><em>X (cm<sup>-1</sup>)</em></strong>，那么波长 <strong><em>λ (nm)</em></strong> 对应的波数为 <strong><em>N = 10<sup>-2</sup>/λ =  10,000,000/(λ×10<sup>9</sup>) (cm<sup>-1</sup>)</em></strong>，对应的波长分辨率为：<strong><em>λ = 10,000,000×X / N<sup>2</sup> (nm)</em></strong>。</p>
-
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/03/16/单片机程序中为什么要禁止看门狗/">单片机程序中为什么要禁止看门狗?</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-03-16</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>设置<font color="#FF0000">看门狗</font>定时器的时候，必须先关闭它才能设置，否则在开启状态下设置看门狗定时器可能会出现问题。一般单片机和DSP、还有ARM芯片里设置内部功能的时候，都是先关闭这个功能，再设置。中断也是类似的，我们通常它把中断全部关闭了，然后在程序里面进一步设置。</p>
-<p>要搞清楚关闭看门狗定时器的深层次原因，我们首先得明白其用途：</p>
-<p>它其实就是一个定时器，这个定时器溢出是会产生一个中断响应，这个中断响应对应的中断服务就是跳回程序开头，也就是复位。启动看门狗后，要定时在程序中把看门狗的计数器清0，以防止它进入中断然后复位，这就叫做<font color="#FF0000">喂狗</font>。</p>
-<p>看门狗定时器常用在程序很容易跑飞的情况下，比如等待超时，意外进入死循环等。在启动看门狗定时器的前提下，如果程序跑飞，不用怕，等计数器WTCNT溢出时，程序会自动复位。但在一般的程序中是不太可能会跑飞的，所以多数情况下我们关闭看门狗，是因为引入了看门狗之后就多了定时计数值处理的一些代码，这增加了程序的复杂性。</p>
-
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/01/10/Markdown语法/">Markdown语法</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-01-10</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>常用的 <font color="#FF00">Markdown</font> 语法。</p>
-<h4 id="01-段落"><a href="#01-段落" class="headerlink" title="01. 段落"></a>01. 段落</h4><p>一行就是一个段落，如果要另起一行，在两个段落之间添加一个空行即可。</p>
-<h4 id="02-斜体"><a href="#02-斜体" class="headerlink" title="02. 斜体"></a>02. 斜体</h4><p><code>*斜体*</code> -&gt; <em>斜体</em></p>
-<h4 id="03-粗体"><a href="#03-粗体" class="headerlink" title="03. 粗体"></a>03. 粗体</h4><p><code>**粗体**</code> -&gt; <strong>粗体</strong><br><code>***斜体+粗体***</code> -&gt; <strong><em>斜体+粗体</em></strong></p>
-<h4 id="04-上标"><a href="#04-上标" class="headerlink" title="04. 上标"></a>04. 上标</h4><p><code>n&lt;sup&gt;2&lt;/sup&gt;</code> -&gt; n<sup>2</sup></p>
-<h4 id="05-下标"><a href="#05-下标" class="headerlink" title="05. 下标"></a>05. 下标</h4><p><code>a=log&lt;sub&gt;2&lt;/sub&gt;b</code> -&gt; a=log<sub>2</sub>b</p>
-<h4 id="06-函数"><a href="#06-函数" class="headerlink" title="06. 函数"></a>06. 函数</h4><p><code>&amp;fnof;(x)=x+1</code> -&gt; &fnof;(x)=x+1</p>
-<h4 id="07-根号"><a href="#07-根号" class="headerlink" title="07. 根号"></a>07. 根号</h4><p><code>&amp;radic;5</code> -&gt; &radic;5</p>
-<h4 id="08-角度"><a href="#08-角度" class="headerlink" title="08. 角度"></a>08. 角度</h4><p><code>30&amp;deg;</code> -&gt; 30&deg;</p>
-<h4 id="09-标题"><a href="#09-标题" class="headerlink" title="09. 标题"></a>09. 标题</h4><p><code># 这是 H1 #</code><br><code>## 这是 H2 ##</code><br><code>### 这是 H3 ###</code><br><code>...</code><br><code>###### 这是 H5 ######</code></p>
-<h1 id="这是-H1"><a href="#这是-H1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2><h3 id="这是-H3"><a href="#这是-H3" class="headerlink" title="这是 H3"></a>这是 H3</h3><p>…</p>
-<h6 id="这是-H6"><a href="#这是-H6" class="headerlink" title="这是 H6"></a>这是 H6</h6><h4 id="10-引用"><a href="#10-引用" class="headerlink" title="10. 引用"></a>10. 引用</h4><p><code>&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</code></p>
-<blockquote>
-<p>markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</p>
-</blockquote>
-<p>or</p>
-<p><code>&gt;markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。</code><br><code>&gt;&gt;任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</code></p>
-<blockquote>
-<p>markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。</p>
-<blockquote>
-<p>任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</p>
-</blockquote>
-</blockquote>
-<h4 id="11-列表"><a href="#11-列表" class="headerlink" title="11. 列表"></a>11. 列表</h4><p>11.1 无序列表<br><code>*   第一条</code><br><code>*   第二条</code><br><code>*   第三条</code></p>
-<ul>
-<li>第一条</li>
-<li>第二条</li>
-<li>第三条</li>
-</ul>
-<p>1.2 有序列表<br><code>1.  第一条</code><br><code>2.  第二条</code><br><code>3.  第三条</code></p>
-<ol>
-<li>第一条</li>
-<li>第二条</li>
-<li>第三条</li>
-</ol>
-<h4 id="12-代码"><a href="#12-代码" class="headerlink" title="12. 代码"></a>12. 代码</h4><p>用反引号 ` 来标记内联代码，如果代码的内容中有反引号，请用两个反引号包裹。<br>代码中的 &amp;、&lt;、&gt; 符号都会自动转义，请放心使用。</p>
-<h4 id="13-代码区域"><a href="#13-代码区域" class="headerlink" title="13. 代码区域"></a>13. 代码区域</h4><p><img src="/images/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码区域dasdsadasdas</span><br></pre></td></tr></table></figure>
-
-<h4 id="14-分隔线"><a href="#14-分隔线" class="headerlink" title="14. 分隔线"></a>14. 分隔线</h4><p><code>***</code></p>
-<hr>
-<h4 id="15-链接"><a href="#15-链接" class="headerlink" title="15. 链接"></a>15. 链接</h4><p><code>[http://123.com](http://123.com)</code> or <code>&lt;http://123.com&gt;</code></p>
-<h4 id="16-图像"><a href="#16-图像" class="headerlink" title="16. 图像"></a>16. 图像</h4><p><code>![123](123.jpg)</code><br>这种方式需要 <font color="#FF00">123.jpg</font> 和 <font color="#FF00">.md</font> 文件放在一起。<br>or<br><code>![123](123/123.jpg)</code><br>图片放在 <font color="#FF00">.md</font> 同层级的 <font color="#FF00">123</font> 文件夹下。</p>
-<h4 id="17-转义"><a href="#17-转义" class="headerlink" title="17. 转义"></a>17. 转义</h4><p>在其他字符前加 <font color="#FF0000">&lt;/font&gt; 反斜线保持字符原样输出。</font></p>
-<h4 id="18-首行缩进"><a href="#18-首行缩进" class="headerlink" title="18. 首行缩进"></a>18. 首行缩进</h4><p>18.1 半角空格<br><code>&amp;ensp;</code><br>18.2 全角空格<br><code>&amp;emsp;</code></p>
-
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/01/09/Hexo指令/">Hexo指令</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-01-09</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>一些常用的 <font color="#FF0000">Hexo</font> 指令。</p>
-<h4 id="01-新建网站"><a href="#01-新建网站" class="headerlink" title="01. 新建网站"></a>01. 新建网站</h4><p><code>hexo init</code></p>
-<h4 id="02-生成静态文件"><a href="#02-生成静态文件" class="headerlink" title="02. 生成静态文件"></a>02. 生成静态文件</h4><p><code>hexo generate</code></p>
-<h4 id="03-启动服务器"><a href="#03-启动服务器" class="headerlink" title="03. 启动服务器"></a>03. 启动服务器</h4><p><code>hexo server</code><br>默认情况下，访问网址为: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<h4 id="04-新建一篇文章"><a href="#04-新建一篇文章" class="headerlink" title="04. 新建一篇文章"></a>04. 新建一篇文章</h4><p><code>hexo new &quot;My New Post&quot;</code></p>
-<h4 id="05-清除缓存文件-db-json-和已生成的静态文件-public"><a href="#05-清除缓存文件-db-json-和已生成的静态文件-public" class="headerlink" title="05. 清除缓存文件 db.json 和已生成的静态文件  public"></a>05. 清除缓存文件 <font color="#FF0000">db.json</font> 和已生成的静态文件  <font color="#FF00">public</font></h4><p><code>hexo clean</code></p>
-<h4 id="06-部署网站"><a href="#06-部署网站" class="headerlink" title="06. 部署网站"></a>06. 部署网站</h4><p><code>hexo deploy</code></p>
-<h4 id="07-显示草稿"><a href="#07-显示草稿" class="headerlink" title="07. 显示草稿"></a>07. 显示草稿</h4><p><code>hexo --draft</code><br>显示 <font color="#FF00">source/_drafts</font> 文件夹中的草稿文章。</p>
-<h4 id="08-显示版本"><a href="#08-显示版本" class="headerlink" title="08. 显示版本"></a>08. 显示版本</h4><p><code>hexo -v</code></p>
-<h4 id="09-安全模式"><a href="#09-安全模式" class="headerlink" title="09. 安全模式"></a>09. 安全模式</h4><p><code>hexo --safe</code><br>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h4 id="10-调试模式"><a href="#10-调试模式" class="headerlink" title="10. 调试模式"></a>10. 调试模式</h4><p><code>hexo --debug</code><br>在终端中显示调试信息并记录到 <font color="#FF00">debug.log</font>。</p>
-
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2017/01/08/Hexo博客搭建教程/">Hexo博客搭建教程</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2017-01-08</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>基于 Github 搭建 Hexo 框架的博客，快速上手而且简洁高效，详见 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo文档</a>。</p>
-<h4 id="1-Node-js"><a href="#1-Node-js" class="headerlink" title="1. Node.js"></a>1. Node.js</h4><p>下载链接：<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x86.msi" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://nodejs.org/dist/v8.10.0/node-v8.10.0-x64.msi" target="_blank" rel="noopener">64bit</a><br>不确定版本的话直接下载32位即可，然后保持默认设置安装。<br>检查安装情况，win+r 打开运行，输入 cmd 回车，输入以下代码:<br><code>node -v</code><br><code>npm -v</code><br>如下图所示，则说明安装正确。<br><img src="/images/%E6%95%99%E7%A8%8B01.png" alt></p>
-<h4 id="2-Git"><a href="#2-Git" class="headerlink" title="2. Git"></a>2. Git</h4><p>下载链接：<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe" target="_blank" rel="noopener">32bit</a>&amp;<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank" rel="noopener">64bit</a><br>其他设置只需要保持默认，但建议 PATH 选项按照下图选择：<br><img src="/images/%E6%95%99%E7%A8%8B02.png" alt><br>检查安装情况，输入以下代码:<br><code>git --version</code><br>如下图所示，则说明安装正确。<br><img src="/images/%E6%95%99%E7%A8%8B03.png" alt></p>
-<h4 id="3-Github"><a href="#3-Github" class="headerlink" title="3. Github"></a>3. Github</h4><p>打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册帐号，前往邮箱确认注册。<br>登录帐号，点击页面右上角的+，选择 New repository，注意在 Repository name 下必须填写为 yourname.github.io，其他可不填，然后点击 Create repository。<br><img src="/images/%E6%95%99%E7%A8%8B04.png" alt></p>
-<h4 id="4-GitHub-Pages"><a href="#4-GitHub-Pages" class="headerlink" title="4. GitHub Pages"></a>4. GitHub Pages</h4><p>可以去看这里的<a href="https://pages.github.com/" target="_blank" rel="noopener">官方教程</a>，只要 <a href="https://yourname.github.io" target="_blank" rel="noopener">yourname.github.io</a> 可以正常访问就可以。</p>
-<h4 id="5-Hexo"><a href="#5-Hexo" class="headerlink" title="5. Hexo"></a>5. Hexo</h4><p>任意盘符下新建文件夹，打开文件夹右键选择 Git Bash Here，如图：<br><img src="/images/%E6%95%99%E7%A8%8B05.png" alt><br>输入：<br><code>npm install hexo-cli -g</code><br>看到下图，继续输入：<br><img src="/images/%E6%95%99%E7%A8%8B06.png" alt><br><code>npm install hexo --save</code><br>结束后输入：<br><code>hexo -v</code><br>看到下图就说明安装成功。<br><img src="/images/%E6%95%99%E7%A8%8B07.png" alt><br>输入以下代码初始化：<br><code>hexo init</code><br>然后输入：<br><code>npm install</code><br>等待 npm 安装完所需组件即可。<br>安装完成后，再次输入：<br><code>hexo g</code><br>然后<br><code>hexo s</code><br>这时在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就看见了你的博客首页。</p>
-<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6. 部署博客"></a>6. 部署博客</h4><p>打开命令行窗口，然后输入：<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>然后在_config.yml 文件中，找到 Deployment，然后按照如下格式修改：<font color="#FF0000"><br>deploy:<br>&emsp;type: git<br>&emsp;repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>&emsp;branch: master</font><br>再输入：<br><code>ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;</code><br>连续按3个回车后返回如下信息：<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>打开生成的 <font color="#FF0000">id_rsa.pub</font>，前往 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 添加密钥。<br>输入以下代码测试：<br><code>ssh git@github.com</code><br>返回 successfully 信息即表示部署成功。<br>我们就可以使用以下命令发布文章了：<br><code>hexo d</code></p>
-<h4 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h4><p>Hexo 命令可以参考<a href="https://16cm.github.io/2017/01/09/Hexo%E6%8C%87%E4%BB%A4/" target="_blank" rel="noopener">这篇文章</a>。</p>
-
-                
-            </div>
-        </article>
-    
+<body id="bodyx">
+    <div class="hd logodiv">
+    <img src="/img/logo.png" class="logopng">
+    <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> 数字难民 <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
 </div>
-<div class="paginator">
+<div class="hd">
+    <ol class="breadcrumb">
+        
+            <li><a class="ba" href="/project">作品</a></li>
+        
+            <li><a class="ba" href="/domain">域名</a></li>
+        
+            <li><a class="ba" href="/links">友联</a></li>
+        
+            <li><a class="ba" href="/about">关于</a></li>
+        
+    </ol>
+    <hr class="breadcrumbhr">
+</div>
+<div class="hd">
+    
     
         
-        <a class="prev" href="/page/3/">
-            <i class="iconfont icon-prev"></i>
-            上一页
+        
+            <div class="titlex">
+                <p><span class="jing">#</span>
+                    2017
+                </p>
+            </div>
+            
+        
+        <a class="flink" href="/2017/03/20/波数分辨率与波长分辨率的转换/">
+            <div class="list">
+                <div class="postname">
+                    波数分辨率与波长分辨率的转换
+                </div>
+                <div class="posttime">
+                    March 20th
+                </div>
+            </div>
         </a>
+    
         
         
+        <a class="flink" href="/2017/03/16/单片机程序中为什么要禁止看门狗/">
+            <div class="list">
+                <div class="postname">
+                    单片机程序中为什么要禁止看门狗?
+                </div>
+                <div class="posttime">
+                    March 16th
+                </div>
+            </div>
+        </a>
+    
+        
+        
+        <a class="flink" href="/2017/01/10/Markdown语法/">
+            <div class="list">
+                <div class="postname">
+                    Markdown语法
+                </div>
+                <div class="posttime">
+                    January 10th
+                </div>
+            </div>
+        </a>
+    
+        
+        
+        <a class="flink" href="/2017/01/09/Hexo指令/">
+            <div class="list">
+                <div class="postname">
+                    Hexo指令
+                </div>
+                <div class="posttime">
+                    January 9th
+                </div>
+            </div>
+        </a>
+    
+        
+        
+        <a class="flink" href="/2017/01/08/Hexo博客搭建教程/">
+            <div class="list">
+                <div class="postname">
+                    Hexo博客搭建教程
+                </div>
+                <div class="posttime">
+                    January 8th
+                </div>
+            </div>
+        </a>
     
 </div>
-
-    </div>
+    <div class="footer" id="footer">
+    <p>© 2020 <a class="flink" href="https://hexo.io">Hexo</a> & <a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
 </div>
-<footer class="footer-social">
-    
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="SAvNyiOid7YBWicgMO9M1xQs-MdYXbMMI">
+<input type="hidden" id="valine_appKey" value="WLcyKDIldBP38Bg6r5SDCk7G">
+<script src="/libs/jquery.min.js"></script>
+<script src="/libs/highlight/highlight.pack.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script src="/js/js.js"></script>
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
 
-    
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
 
-    
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
 
-    <div class="footer-copyright">
-        <p class="time-line">
-            &copy;
-            
-            
-            2019
-            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
-            <a target="_blank" href="https://github.com/16cm">16cm</a>
-        </p>
-        <p class="theme-info">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
-            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
-        </p>
-    </div>
-</footer>
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    
 
-</script>
 </html>
