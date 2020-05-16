@@ -34,6 +34,7 @@ a:hover {
 }
 .logodiv {
   text-align: center;
+  margin-top: 35px;
 }
 .titlex {
   font-size: 20px;
@@ -53,7 +54,7 @@ a:hover {
   float: right;
 }
 .logopng {
-  width: 200px;
+  width: 350px;
 }
 .breadcrumb {
   padding: 8px 15px;
@@ -67,7 +68,7 @@ a:hover {
 }
 .logot {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: -10px;
   margin-bottom: -20px;
 }
