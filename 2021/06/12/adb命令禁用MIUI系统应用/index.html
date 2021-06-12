@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        数字难民
+    </title>
+    <link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            adb命令禁用安卓系统应用
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <p>前几天买了台小米手机，说实话广告挺多，来，慢慢关吧！</p>
+<h3 id="系统广告"><a href="#系统广告" class="headerlink" title="系统广告"></a>系统广告</h3><p>首先登录小米账号，然后设置中搜索<font color="#FF0000">系统广告</font>，关闭后即可去掉大部分广告。</p>
+<p><img src="/images/adb%E5%91%BD%E4%BB%A4%E7%A6%81%E7%94%A8MIUI%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A801.jpg" alt></p>
+<p><img src="/images/adb%E5%91%BD%E4%BB%A4%E7%A6%81%E7%94%A8MIUI%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A802.jpg" alt></p>
+<h3 id="自带应用"><a href="#自带应用" class="headerlink" title="自带应用"></a>自带应用</h3><p>1.下载 adb 工具，地址：<a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener">Win</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="noopener">Linux</a> <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="noopener">macOS</a></p>
+<p>2.安装<a href="http://bigota.d.miui.com/tools/MiFlash2018-5-28-0.zip" target="_blank" rel="noopener">小米通用刷机工具</a>的驱动，安装好驱动才能正常使用 ADB 工具</p>
+<p>3.打开<font color="#FF0000">设置-我的设备-全部参数</font>，在 <font color="#FF0000">MIUI 版本</font>一栏连续点击多次，开启 MIUI 开发者模式。</p>
+<p>4.打开<font color="#FF0000">设置-更多设置</font>，进入开发者选项，再打开 <font color="#FF0000">USB 调试</font>和 <font color="#FF0000">USB 调试（安全设置）</font>两项</p>
+<p>5.手机连接电脑，在 adb 文件夹中 按住 Shift 键然后鼠标右键 <font color="#FF0000">以管理员身份打开命令提示符</font></p>
+<p>6.使用以下命令禁用应用，不用一个个手打，可以复制粘贴到命令行中</p>
+<p>MIUI 12 可禁用应用列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm uninstall --user 0 com.miui.systemAdSolution 				//小米系统广告解决方案 必删</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.analytics								//小米广告分析 必删</span><br><span class="line">adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service	//小米游戏中心服务</span><br><span class="line">adb shell pm uninstall --user 0 com.xiaomi.gamecenter						//小米游戏中心</span><br><span class="line">adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi	//搜狗输入法</span><br><span class="line">adb shell pm uninstall --user 0 com.baidu.input_mi 							//百度输入法小米版</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.player									//小米音乐</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.video									//小米视频</span><br><span class="line">//adb shell pm uninstall --user 0 com.miui.notes								//小米便签</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.translation.youdao				//有道翻译</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.translation.kingsoft				//金山翻译</span><br><span class="line">adb shell pm uninstall --user 0 com.android.email								//邮件</span><br><span class="line">adb shell pm uninstall --user 0 com.xiaomi.scanner							//小米扫描</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.hybrid								//混合器</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.bugreport							//bug 反馈</span><br><span class="line">adb shell pm uninstall --user 0 com.milink.service								//米连服务</span><br><span class="line">//adb shell pm uninstall --user 0 com.android.browser						//浏览器</span><br><span class="line">//adb shell pm uninstall --user 0 com.miui.gallery								//相册</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.yellowpage							//黄页</span><br><span class="line">//adb shell pm uninstall --user 0 com.xiaomi.midrop							//小米快传</span><br><span class="line">//adb shell pm uninstall --user 0 com.miui.virtualsim							//小米虚拟器</span><br><span class="line">adb shell pm uninstall --user 0 com.xiaomi.payment							//小米支付</span><br><span class="line">adb shell pm uninstall --user 0 com.mipay.wallet								//小米钱包</span><br><span class="line">adb shell pm uninstall --user 0 com.android.soundrecorder				//录音机</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.screenrecorder					//屏幕录制</span><br><span class="line">//adb shell pm uninstall --user 0 com.android.wallpaper					//壁纸</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.voiceassist 							//语音助手</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.fm										//收音机</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.touchassistant 						//悬浮球</span><br><span class="line">//adb shell pm uninstall --user 0 com.android.cellbroadcastreceiver	//小米广播</span><br><span class="line">//adb shell pm uninstall --user 0 com.xiaomi.mitunes							//小米助手</span><br><span class="line">//adb shell pm uninstall --user 0 com.xiaomi.pass								//小米卡包</span><br><span class="line">adb shell pm uninstall --user 0 com.android.thememanager				//个性主题管理</span><br><span class="line">//adb shell pm uninstall --user 0 com.android.wallpaper					//动态壁纸</span><br><span class="line">adb shell pm uninstall --user 0 com.android.wallpaper.livepicker		//动态壁纸获取</span><br><span class="line">//adb shell pm uninstall --user 0 com.miui.klo.bugreport  					//KLO bug 反馈</span><br><span class="line">adb shell pm uninstall --user 0 com.miui.miservice 							//服务反馈</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://fengooge.blogspot.com/2019/03/taking-ADB-to-uninstall-system-applications-in-MIUI-without-root.html" target="_blank" rel="noopener">使用ADB不root删除小米MIUI系统自带应用</a></p>
+
+    </div>
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+    <p>© 2021 <a class="flink" href="https://hexo.io">Hexo</a> & <a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="SAvNyiOid7YBWicgMO9M1xQs-MdYXbMMI">
+<input type="hidden" id="valine_appKey" value="WLcyKDIldBP38Bg6r5SDCk7G">
+<script src="/libs/jquery.min.js"></script>
+<script src="/libs/highlight/highlight.pack.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script src="/js/js.js"></script>
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+</body>
+
+</html>
